@@ -1,0 +1,69 @@
+<aura:component controller="CarTypeSearch" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+
+    <aura:attribute name="Buttonlabel" type="string" default="Serach Button"/>
+    <aura:attribute name="Newlabel" type="string" default="New Button"/>
+    <aura:attribute name="ShowNew" type="Boolean" default="false"/>
+    
+    <aura:attribute name="carTypes" type="CarType__c[]" />
+    
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}"/>
+    
+    
+      <lightning:layout  horizontalAlign="center">
+         <lightning:layoutItem  padding="around-medium">
+             <lightning:select  name="selectItem"  aura:id="carTypeList" label="All Types"  variant="label-hidden" 
+                               value="">
+                   <option value="" text="All Types"/>
+                 <aura:iteration items="{!v.carTypes}" var="carType" >
+                   <option value="{!carType.Id}" text="{!carType.Name}"/>
+                 </aura:iteration>
+             </lightning:select>
+         </lightning:layoutItem>
+          
+        <lightning:layoutItem  padding="around-medium">
+                <lightning:button variant="brand" label="{!v.Buttonlabel}" onclick="{!c.onsearchclick}" />
+
+             <aura:if isTrue="{!v.ShowNew}">
+                <lightning:button variant="Neutral" label="{!v.Newlabel}" onclick="{!c.createRecord}"/>
+                
+             </aura:if>
+             
+         </lightning:layoutItem>
+     </lightning:layout>
+
+    
+  
+<!--<p>This example creates a simple layout with field headers.</p>
+    <div class="c-container">
+        <lightning:layout >
+            <lightning:layoutItem padding="around-small">
+                <div class="header-column">
+                    <p class="field-title" title="Field 1">Field 1</p>
+                    <p>Name</p>
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small">
+                <div class="header-column">
+                    <p class="field-title" title="Field2 (3)">Field 2 (3)
+                        <lightning:buttonIcon iconName="utility:down" variant="border-filled" size="small" alternativeText="More Actions" />
+                    </p>
+                    <p>Eligibility</p>
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small">
+                <div class="header-column">
+                    <p class="field-title" title="Field 3">Field 3</p>
+                    <a href="#">Website</a>
+                </div>
+            </lightning:layoutItem>
+            <lightning:layoutItem padding="around-small">
+                <div class="header-column">
+                    <p class="field-title" title="Field 4">Field 4</p>
+                    <p>
+                        <span title="">Address</span>
+                    </p>
+                </div>
+            </lightning:layoutItem>
+        </lightning:layout>
+    </div>-->
+</aura:component>

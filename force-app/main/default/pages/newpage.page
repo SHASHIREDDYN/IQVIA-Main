@@ -1,0 +1,45 @@
+<apex:page standardController="Account" sidebar="false" setup="false" showHeader="true" tabStyle="Account" rendered="true">
+<apex:sectionHeader title=" Edit Account" subtitle="Account"/>
+<apex:form >
+            <apex:pageBlock title="Account Details" rendered="true">
+              <apex:pageBlockButtons location="both">
+              
+                <apex:commandButton value="Save" action="{!Save}"/>
+                <apex:commandButton value="Cancel" action="{!Cancel}"/> 
+                <apex:commandButton value="Delete" />
+                <apex:commandButton value="Qiuck Save"/> 
+                 
+                <!-- <b>
+                <apex:commandLink value="First"/> &nbsp; &nbsp; &nbsp; &nbsp;
+                <apex:commandLink value="Last"/> &nbsp; &nbsp; &nbsp; &nbsp;
+                <apex:commandLink value="Next"/> &nbsp; &nbsp; &nbsp; &nbsp;
+                <apex:commandLink value="Previous"/> &nbsp; &nbsp; &nbsp; &nbsp; 
+                </b>  -->
+              </apex:pageBlockButtons>
+                 <apex:pageBlockSection title="Account info" columns="2" collapsible="false">
+                    <apex:inputField value="{!Account.name}"/>
+                    <apex:inputField value="{!account.rating}" required="true"/>
+                    <apex:inputField value="{!account.industry}"/>
+                    <apex:inputField value="{!account.annualrevenue}"/>
+                    <apex:inputField value="{!account.PAN_NUMBER__c}"/>
+                 </apex:pageBlockSection>
+               
+                 <apex:pageBlockSection title="Address info" columns="" collapsible="false">
+                    <apex:inputField value="{!account.billingstate}"/>
+                    <apex:inputField value="{!account.billingcity}"/>
+                    <apex:inputField value="{!account.billingcountry}"/>
+                 </apex:pageBlockSection>
+                 
+                 <apex:pageBlockSection title="Description info" columns="5" collapsible="false">
+                 </apex:pageBlockSection>
+            </apex:pageBlock>
+            <apex:pageBlock title="Contact Details">
+            
+            </apex:pageBlock>
+            <apex:pageBlock title="Case Records" id="caselock">
+            </apex:pageBlock>
+</apex:form>
+<apex:form >
+<apex:sectionHeader title=" Edit Contact" subtitle="Contact"/>
+</apex:form>
+</apex:page>

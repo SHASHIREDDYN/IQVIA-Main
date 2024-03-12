@@ -1,0 +1,21 @@
+<aura:component>
+    <aura:attribute name="salutationOptions" type="List" default="[
+        {'label': 'Mr.', 'value': 'Mr.'},
+        {'label': 'Ms.', 'value': 'Ms.'},
+        {'label': 'Mrs.', 'value': 'Mrs.'},
+        {'label': 'Dr.', 'value': 'Dr.'},
+        {'label': 'Prof.', 'value': 'Prof.'},
+    ]"/>
+    <div>
+        <lightning:inputName
+            label="Default Input Name Field"
+            firstName="John"
+            middleName="Middleton"
+            lastName="Doe"
+            informalName="Jo"
+            suffix="The 3rd"
+            salutation="Mr."
+            options="{!v.salutationOptions}"
+        />
+    </div>
+</aura:component>

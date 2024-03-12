@@ -1,0 +1,18 @@
+<aura:component >
+    <aura:attribute name="Name" type="string"/>
+    <aura:attribute name="Amount" type="Decimal"/>
+    <aura:attribute name="Rate" type="Decimal"/>
+    <aura:attribute name="year" type="Decimal"/>
+    <aura:attribute name="interest" type="Decimal"/>
+    
+    <lightning:input type="string" name="Name" label="Enter a Name" />
+    <lightning:input type="Decimal" name="Amount" label="Enter a Amount" />
+    <lightning:input type="Decimal" name="Rate" label="Enter a Rate" />
+    <lightning:input type="Number" name="year" label="Enter a Year"  />
+
+
+    Interest is:{!v.intest}<br/>
+    <lightning:button variant="brand" label="Submit" title="Interest" onclick="{! c.invoke }" />
+    
+
+</aura:component>

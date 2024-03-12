@@ -1,0 +1,22 @@
+<apex:page controller="LeadSearchResultsController" setup="false" sidebar="false" showHeader="true" tabStyle="Customer__c">
+<apex:sectionHeader title="Search Results" subtitle="Lead Search Results"/>
+<apex:form >
+        <apex:pageblock title="Search Results :( {!lstleads.size})">
+                <apex:pageblockButtons location="top">
+                  
+                    <apex:commandButton value="Search Again" action="{!GotoserachPage}"/>
+                 
+               </apex:pageblockButtons>
+               
+               <apex:pageblockTable value="{!lstleads}" var="ld">
+                   <apex:column headerValue="Lead Name">
+                       <apex:outputLink value="/{!ld.id}" target="_blank"> {!ld.firstname} {!ld.lastname}}</apex:outputLink>
+                   </apex:column>
+                   <apex:column value="{!ld.rating}"/>
+                   <apex:column value="{!ld.phone}"/>
+                   <apex:column value="{!ld.fax}"/>
+               </apex:pageblockTable>
+        
+        </apex:pageblock>
+</apex:form>
+</apex:page>

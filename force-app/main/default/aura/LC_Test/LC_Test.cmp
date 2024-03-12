@@ -1,0 +1,30 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<lightning:tabset >
+        
+      <lightning:tab label='Feed'>
+         <lightning:tabset variant="scoped">
+             <div class="slds-text-color_inverse">
+             <lightning:tab label="Post" iconName="">
+                 <lightning:input label='Enter 255 characters here' required='true' place-holder="Say something about you"/>
+                 <br/>
+                 Details
+                 <br/>
+                 <lightning:inputrichtext label='Details'/>
+                     <lightning:input variant='Brand' name="file1" type="file" label="Attachment" multiple="true" accept="image/png, .zip" />
+                     <br/>
+                       <P align='center'> <lightning:button label="Post" variant="brand"/></P>
+             </lightning:tab >
+             <lightning:tab label="Email" iconName="">
+                <p>Do the contact here</p>
+             </lightning:tab>
+             <lightning:tab label="Poll" iconName="">
+                 
+                <p>Do the poll here.Open the 
+                 <a href="www.salesforce.com"> Link</a></p>
+             </lightning:tab>
+                 </div>
+         </lightning:tabset>
+      </lightning:tab>
+    
+    </lightning:tabset>
+</aura:component>

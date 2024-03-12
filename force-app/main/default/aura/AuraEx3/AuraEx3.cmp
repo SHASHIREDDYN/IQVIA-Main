@@ -1,0 +1,11 @@
+<aura:component controller="Aura3">
+    <div class="box">
+    <lightning:input label="Ente Amount" aura:id="amount"/>
+    <lightning:input label="Enter Rate" aura:id="rate"/>
+    <lightning:input label="Enter Year" aura:id="years"/>
+    <lightning:input label="Intrest" aura:id="intrest"/>
+    
+    <lightning:buttonIcon  iconName="utility:call" alternativeText="Icon Loaded" onclick="{!c.showme}" />
+    </div>
+    
+</aura:component>

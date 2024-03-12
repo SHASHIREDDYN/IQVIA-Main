@@ -1,0 +1,20 @@
+<apex:page standardController="Account" sidebar="false" showHeader="true" setup="false" tabStyle="Account">
+<chatter:feedWithFollowers entityId="{!Account.ID}"/>
+<apex:detail inlineEdit="true" showChatter="false" relatedList="false"/> 
+  <apex:relatedList list="Contacts" pageSize="5" rendered="true"/>
+  
+  <apex:relatedList list="Opportunities" pageSize="5" rendered="true"/>
+  
+  <apex:relatedList list="Cases" pageSize="5" rendered="true"/>
+  
+  <apex:relatedList list="openactivities" pageSize="5" rendered="true"/>
+  
+  <apex:relatedList list="Activityhistories" pageSize="5" rendered="true"/>
+  
+  <apex:relatedList list="CombinedAttachments" pageSize="5" rendered="true"/>
+  
+  <apex:relatedList list="Processsteps" pageSize="5" rendered="true"/>
+  
+  <apex:relatedList list="Recruiters__r" pageSize="5" rendered="true"/>
+
+</apex:page>

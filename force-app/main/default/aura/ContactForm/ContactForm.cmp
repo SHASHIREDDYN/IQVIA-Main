@@ -1,0 +1,28 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="conFirstName" type="string" />
+
+ 
+
+    <aura:attribute name="conLastName" type="string" />
+    <aura:attribute name="conTitle" type="string" />
+    <aura:attribute name="conDepartment" type="string" />
+    <aura:attribute name="newContactRecord" type="Object"/>
+    <aura:attribute name="contactFieldsToQuery" type="Object"/>
+    <aura:attribute name="recordError" type="String"/>
+    <aura:attribute name="accountId" type="string"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <force:recordData aura:id="creatingContactRecordOnAccount"
+                   
+                      layoutType="FULL"
+                      mode="EDIT"
+                      targetRecord="{!v.newContactRecord}"
+                      targetFields="{!v.contactFieldsToQuery}"
+                      targetError="{!v.recordError}"
+                      />
+    <lightning:input label="FirstName" value="{!v.conFirstName}"/>
+    <lightning:input label="LastName" value="{!v.conLastName}"/>
+    <lightning:input label="Title" value="{!v.conTitle}"/>
+    <lightning:input label="Department" value="{!v.conDepartment}"/>
+    <lightning:button label="Add contact" onclick="{!c.addContact}"/>
+</aura:component>

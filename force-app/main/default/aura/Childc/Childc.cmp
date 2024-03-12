@@ -1,0 +1,15 @@
+<aura:component >
+    <aura:registerEvent name="cmpEvent" type="c:ComponentEvent"/>
+    
+    <aura:attribute type="string" name="messageString"/>
+    
+    <h1>
+      Component Event Notifier
+    </h1>
+    
+    <lightning:input label="Message" value="{!v.messageString}"/>
+    
+    <lightning:button label="Fire Component Event" onclick="{!c.firecomponentevent}"/>
+    
+    
+</aura:component>

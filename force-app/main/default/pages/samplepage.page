@@ -1,0 +1,20 @@
+<apex:page standardController="Account" setup="false" showHeader="true" sidebar="true" tabStyle="Account">
+<apex:detail inlineEdit="true" relatedList="false" title="true" showChatter="true"/>
+<apex:sectionHeader title="Account Edit " subtitle="Account"/>
+<apex:form >
+    <apex:pageBlock title="Account Edit" id="accBlock" >
+                <apex:pageBlockButtons location="Both">
+                 <apex:commandButton value="Save"/>
+                 <apex:commandButton value="Cancel"/>
+                 <apex:commandButton value="Edit"/>
+                </apex:pageBlockButtons>
+       <apex:pageBlockSection title="Account Info" columns="2" collapsible="true">
+             <apex:inputField value="{!Account.Rating}"/> 
+             <apex:inputField value="{!Account.Name}"/>    
+       </apex:pageBlockSection>
+       
+       <apex:pageblockSection title="Address Info" columns="2" collapsible="true">
+       </apex:pageblockSection>
+    </apex:pageBlock>
+</apex:form>
+</apex:page>

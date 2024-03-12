@@ -1,0 +1,22 @@
+<apex:page controller="Calcicontroler" setup="false" showHeader="true" sidebar="false" tabStyle="Case" >
+<apex:sectionHeader title="acc Edit" subtitle="ACc"/>
+<apex:form >
+           <apex:pagemessages id="Errors"></apex:pagemessages>
+           
+  <apex:pageBlock title="Basic Calculator">
+   <apex:pageBlockButtons location="Both">
+     <apex:commandButton value="Addition"  action="{!Addition}" reRender="res"/>
+     <apex:commandButton value="Subtraction" action="{!Subtraction}" reRender="res"/>
+     <apex:commandButton value="Multplication" action="{!Multiplication}" reRender="res"/>
+     <apex:commandButton value="Division" action="{!Division}" reRender="res,Errors"/>
+     <apex:commandButton value="Modulus" action="{!Modulus}" reRender="res"/>
+   </apex:pageBlockButtons>
+     <apex:pageBlockSection title="Calculator Section" columns="2" collapsible="true">
+         <apex:inputText label="Enter First Number : " Html-placeholder="Enter First Number" value="{!firstnumber}"/><br/>
+         <apex:inputtext label="Second Number : " Html-Placeholder="Enter Second Number " value="{!secondnumber}"/>
+         <apex:outputLabel id="res" ><b> Operation Result is...: {!result}</b></apex:outputLabel>
+         
+     </apex:pageBlockSection>
+  </apex:pageBlock>
+</apex:form>
+</apex:page>

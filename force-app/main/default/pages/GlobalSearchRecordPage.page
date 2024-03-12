@@ -1,0 +1,48 @@
+<apex:page controller="GlobalSearchRecordPageController" setup="false" sidebar="false" showHeader="true" tabStyle="Solution">
+<apex:sectionHeader title="Global Search"/>
+<apex:form >
+   <apex:pageblock title="Global Search Block" >
+       <apex:pageblockSection title="Search Records" columns="2" collapsible="false">
+          <apex:inputText label="Enter Search Text :" html-placehloder="Enter Search Text" value="{!searchText}"/>
+          <apex:commandButton value="Search Records" action="{!SearchRecords}" reRender="accblock,conblock,ldblock"/>
+       </apex:pageblockSection>
+   </apex:pageblock>
+   <apex:pageblock title="Matching Account :( {!lstaccounts.size})" id="accblock">
+       <apex:pageBlockTable value="{!lstaccounts}" var="acc">
+           <apex:column value="{!acc.name}"/>
+           <apex:column value="{!acc.rating}"/>
+           <apex:column value="{!acc.industry}"/>
+           <apex:column value="{!acc.annualrevenue}"/>
+       </apex:pageBlockTable>
+   </apex:pageblock>
+
+
+
+   <apex:pageblock title="Matching Contacts :({!lstcontacts.size})" id="conblock">
+       <apex:pageblockTable value="{!lstcontacts}" var="con">
+           <apex:column value="{!con.firstname}"/>
+           <apex:column value="{!con.lastname}"/>
+           <apex:column value="{!con.phone}"/>
+           <apex:column value="{!con.title}"/>
+       </apex:pageblockTable>
+         
+   </apex:pageblock>
+   
+   <apex:pageblock title="Matching Leads:({!lstleads.size} )" id="ldblock">
+       <apex:pageBlockTable value="{!lstcontacts}" var="ld">
+          <apex:column value="{!ld.firstname}"/>
+          <apex:column value="{!ld.lastname}"/>
+          <apex:column value="{!ld.email}"/>
+          <apex:column value="{!ld.title}"/>
+          <apex:column value="{!ld.phone}"/>
+       </apex:pageBlockTable>
+   </apex:pageblock>
+   
+
+   </apex:form>
+
+
+
+
+ 
+</apex:page>

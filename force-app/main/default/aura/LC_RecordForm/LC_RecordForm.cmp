@@ -1,0 +1,9 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+    <lightning:recordEditForm objectApiName="Account">
+        <lightning:inputField filedName='Name'/>
+        <lightning:inputField filedName="Industry"/>
+        <lightning:inputField  filedName='Phone'/>
+        <lightning:inputField filedName='Type'/>
+        
+    </lightning:recordEditForm>
+</aura:component>

@@ -1,0 +1,8 @@
+<apex:page controller="customerdetailscontroller">
+    customer id is...:{!Customerid}<br/>
+    customer name is...:{!name}<br/>
+    customer contact number is...:{!phone}<br/>
+    customer email is is....:{!emailid}<br/>
+    customer revenue is...:{!annularevenue}
+    customer is existing person...:{!isnew}<br/>
+</apex:page>

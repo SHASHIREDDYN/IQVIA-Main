@@ -1,0 +1,11 @@
+<aura:component implements="c:Interface1">
+     
+<lightning:card title="Customer Details">
+    <lightning:input label="Name" value="{!v.Fname}"/>
+    <lightning:input label="Contact Number" value="{!v.Phone}"/>
+    <lightning:input label="age" value="{!v.Age}"/>
+
+</lightning:card>
+ 
+
+</aura:component>

@@ -1,0 +1,30 @@
+<apex:page controller="Searchcontactpageconroller" sidebar="false" setup="false" showHeader="true" tabStyle="Case">
+<apex:sectionHeader title="Account Edit" subtitle="Account"/>
+<apex:form >
+
+<apex:pagemessages id="Errors"></apex:pagemessages>
+
+  <apex:pageBlock title=" Serch Account Block">
+  
+     <apex:pageBlockSection title="Search Contact Records" columns="2" collapsible="false">
+              <apex:inputText label="Enter Search Text : " html-placeholder="Enter Search Text" value="{!serchtest}"/>
+              <apex:commandButton value="Search Records" action="{!Searchcontactpageconroller}" reRender="pageblock,errors"/>
+     </apex:pageBlockSection>
+     
+  </apex:pageBlock>
+  
+   <apex:pageBlock title="Seacrh Results : ({!lstcon.size} )" id="pageblock">
+   
+     <apex:pageBlockTable value="{!lstcon}" var="acc">
+     
+     <apex:column headerValue="Account Name">
+        <apex:outputLink value="/{acc.id}" target="_blank">{!acc.name}</apex:outputLink>
+     </apex:column>
+     <apex:column value="{!acc.rating}"/>
+     <apex:column value="{!acc.industry}"/>
+     
+     </apex:pageBlockTable>
+   
+   </apex:pageBlock>
+</apex:form>
+</apex:page>

@@ -1,0 +1,44 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<lightning:tabset>
+     <lightning:tab label='Post' id='idpost'>
+        <lightning:tabset variant="scoped">
+        <lightning:tab label="New Event" iconName="action:new_event">
+            One Content !
+        </lightning:tab>
+        <lightning:tab label="Log a call" iconName="action:log_a_call">
+            Two Content !
+        </lightning:tab>
+        <lightning:tab label="Email" iconName="action:email">
+            <h1><b>Details here</b></h1>
+        </lightning:tab>
+            <lightning:tab label="Chatter" id="idchatter">
+               <lightning:tabset>
+                 <lightning:tab label='post'>
+                   </lightning:tab>
+                   <lightning:tab label='Poll'>
+                   </lightning:tab>
+                   <lightning:tab label='Question'>
+                       <lightning:input label="Question(Enter upto 255 characters)" required='true' placeholder="What would you like to know" />
+                       <Br/>
+                       Details
+                       <lightning:inputrichtext label="Details" placeholder="if you have more to say, add details here"/>
+                       <br/>
+                       <P align='center'> <lightning:button label="post" variant="brand"/></P>
+                   </lightning:tab>
+                
+               </lightning:tabset>
+        </lightning:tab>
+    </lightning:tabset>
+        
+      </lightning:tab>
+         <lightning:tab label='Call' id='icall'>
+        
+        
+      </lightning:tab>
+         <lightning:tab label='Email' id='idemail'>
+        
+        
+      </lightning:tab>
+    
+    </lightning:tabset>
+</aura:component>

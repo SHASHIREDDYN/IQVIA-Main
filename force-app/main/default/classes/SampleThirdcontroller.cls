@@ -1,0 +1,2 @@
+public class SampleThirdcontroller {
+}

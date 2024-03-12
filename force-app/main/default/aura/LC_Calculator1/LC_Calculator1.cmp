@@ -1,0 +1,23 @@
+<aura:component >
+    <!--<lightning:input label='Aval' aura:id="aval" />
+    <lightning:input label="Bval" aura:id="bval"/>
+    <lightning:input label="Result" aura:id="cval"/>
+    
+    <lightning:button variant='base' label='Add' onclick="{!c.callAdd}"/>
+    <lightning:button variant='base' label='Mul' onclick="{!c.callMul}"/>
+    <lightning:button variant='base' label='Cancel' onclick="{!c.Reset}"/>-->
+    
+    <aura:attribute name='aval' type='integer' />
+    <aura:attribute name='bval' type='integer'/>
+    <aura:attribute name='cval' type='integer'/>
+     <div class='Box'>
+    <lightning:input type='number' label="Enter a Aval" value="{!v.aval}"/>
+    <lightning:input type='number' label='Enter a Bval' value="{!v.bval}"/>
+    <lightning:input type='number' label='Result' value="{!v.cval}"/>
+    
+    <lightning:button label="Add" onclick="{!c.callAdd}"/>
+    <lightning:button label="Mul" onclick="{!c.callMul}"/>
+    <lightning:button label='cancel' onclick="{!c.Reset}"/>
+    </div>
+    
+</aura:component>

@@ -1,0 +1,9 @@
+<aura:component >
+    <lightning:input label='Aval' aura:id="aval" />
+    <lightning:input label="Bval" aura:id="bval"/>
+    <lightning:input label="Result" aura:id="cval"/>
+    
+    <lightning:button variant='base' label='Add' onclick="{!c.callAdd}"/>
+    <lightning:button variant='base' label='Mul' onclick="{!c.callMul}"/>
+    <lightning:button variant='base' label='Cancel' onclick="{!c.Reset}"/>
+</aura:component>

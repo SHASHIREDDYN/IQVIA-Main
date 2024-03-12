@@ -1,0 +1,29 @@
+<aura:component >
+    
+    <!--<div class="Box">
+    <lightning:input type="number" label="Enter Principle Amount" placeholder="Enter principle amount" aura:id="Principle"/>
+    <lightning:input type="number" label="Enter Tenure period" placeholder="Enter Tenure Period" aura:id="Tenure"/>
+    <lightning:input type="number" label="Enter Interest Rate" placeholder="Enter Interest Rate" aura:id="Interest"/>
+    <lightning:input type="number" label="Total Interest Amount" placeholder="Total Interest Amount" aura:id="Total"/>
+    <lightning:input type="number" label="Total Amount" placeholder="Total Amount" aura:id="Amount"/>
+    
+    <p align="center">
+    <lightning:button label="Calculate Amount" variant="brand" onclick="{!c.ShowTotalInterest}"/>
+
+    </p>
+    </div>*/
+    -->
+    
+    <div Class="Box">
+        <lightning:input label="Enter Principle Amount" type="number" placeholder="Principle Amount" aura:id="pAmount"/>
+        <lightning:input label="Ener Time Period" type="number" placeholder="Time Period" aura:id="tenure"/>
+        <lightning:input label="Enter Interest Rate" type="number" placeholder="Interest Rate" aura:id="rate"/>
+        <lightning:input label="Interest Amount" type="number" placeholder="Interest Amount" aura:id="interestAmount"/>
+        <lightning:input label="Total Amount" type="number" placeholder="Total Amount" aura:id="totalAmount"/>
+        <br/>
+        <p align="center">
+            <lightning:button label="Calculate Interest" variant="brand" onclick="{!c.CalculateSimpleInterest}"/>
+        </p>
+    </div>
+	
+</aura:component>

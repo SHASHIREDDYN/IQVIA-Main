@@ -1,0 +1,21 @@
+<template>
+   <!--  <template for:each={allcontacts.data} for:item="acc">
+
+        <lightning-card icon-name="standard:account" key={acc.Name}>
+            <p>{acc.FirstName}</p>
+            <p>{acc.LastName}</p>
+            <p>{acc.Phone}</p>
+            <p>{acc.Fax}</p>
+            <p>{acc.Email}</p>
+        </lightning-card>
+
+    </template> -->
+
+    <lightning-card title="All Contact Records" icon-name="standard:contact">
+        <lightning-datatable
+          key-field="id"
+          data={allcontacts.data}
+          columns={columns}
+        ></lightning-datatable>
+    </lightning-card>
+</template>

@@ -1,0 +1,5 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<p>
+    This text is from State2  District2 Township2 
+    </p>
+</aura:component>

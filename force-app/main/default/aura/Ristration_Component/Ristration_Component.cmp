@@ -1,0 +1,51 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<aura:attribute name="abc" type="Boolean" default="false"/>
+	<aura:attribute name="NameofStudent" type="String" default=""/>
+	<aura:attribute name="parentsname" type="String" default=""/>
+	<aura:attribute name ="StandardorClass" type="String" default=""/>
+	<aura:attribute name="NoofHoursStudy" type="String[]" default="Less than one hour,Inbetween one to three,Inbetween five to six"/>
+	<aura:attribute name="MobileNumber" type="Integer" default=""/>
+	<aura:attribute name="HaveYouTakenBefore" type="Boolean" default="false"/>
+	<aura:attribute name="AreYouInterestedInOnlineCourse" type="Boolean"/>
+	<aura:attribute name="PageHeading" type="String" default="Registration form for student"/>
+	<!--Value is stored in the attribute is abc is {!v.abc}-->
+	<div class="slds-m-top--xx-large">
+		<div class="slds-page-header">
+			<div class="slds-align--absolute-center">
+				<div class="slds-text-heading--large">
+        
+                {!v.PageHeading}
+               </div>
+			</div>
+		</div>
+	</div>
+	<br/>
+	<br/>
+	<div class="slds-size_3-of-8">
+		<lightning:input label="Enter your Name" name="StudentsName" value="{!v.NameofStudent}"/>
+		<br/>
+		<lightning:input label="Enter your Parents name" name="parenname" value="{!v.parentsname}"/>
+		<br/>
+		<lightning:input label="Enter your Parants name" name="parenname" value="{!v.parentsname}"/>
+		<br/>
+		<lightning:input label="Which class do you study?" name="Classname" value="{!v.StandardorClass}"/>
+		<br/>
+		<lightning:select name="How many hours do you study in a day?" label="hrsStudy">
+			<!-- <option value="">choose one...</option><option value="1">Red</option><option value="2">Yellow</option><option value="3">Green</option>
+   -->
+			<aura:iteration  items="{!v.NoofHoursStudy}" var="hrs">
+			   <option value="{!hrs}" text="{!hrs}"/>
+			</aura:iteration>
+		</lightning:select>
+		<br/>
+		<lightning:input type="telephone" name="MobileNumber" label="Enter your Mobile Number" value="{!v.MobileNumber}"/>
+		<br/>
+		<lightning:input type="Checkbox" name="Are you new to this course" label="firstcheckbox?"/>
+		<br/>
+		<aura:if istrue="false">
+    Hello! You have checked this box.
+    </aura:if>
+		<br/>
+		<lightning:button label="Submit" onclick="{!c.doSubmit}"></lightning:button>
+	</div>
+</aura:component>

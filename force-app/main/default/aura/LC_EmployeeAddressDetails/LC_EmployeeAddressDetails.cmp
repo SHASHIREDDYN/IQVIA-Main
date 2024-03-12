@@ -1,0 +1,7 @@
+<aura:component >
+    <b><u> Employee Address details</u></b><br/>
+    Country: India<br/>
+    city: hyderabad<br/>
+    Street:Snakkar Nagar<br/>
+    Village:Meidipallu<br/>
+</aura:component>

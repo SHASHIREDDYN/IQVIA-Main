@@ -1,0 +1,15 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name="Name" type="string"/>
+    <aura:attribute name="Salary" type="decimal"/>
+    <aura:attribute name="Exp" type="Decimal"/>
+    <aura:attribute name="bonus" type="decimal"/>
+    
+    <aura:handler name="init" value="{!this}" action="{!c.invoke}"/>
+    <div>
+       Name: {!v.Name}<br/><br/>
+       Salary:{!v.Salary}<br/><br/>
+        Exp:{!v.Exp}<br/><br/>
+         Bonus:{!v.bonus}
+    
+    </div>
+</aura:component>

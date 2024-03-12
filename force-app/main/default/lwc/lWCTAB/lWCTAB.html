@@ -1,0 +1,42 @@
+<template>
+    <div>
+    <lightning-tabset>
+        <lightning-tab label="Details" title="Show Record Details">
+            <h1>This is Record Details</h1>
+        </lightning-tab>
+
+        <lightning-tab label="Related" title="Show Related Records">
+            <h2>This is Related records </h2>
+        </lightning-tab>
+
+        <lightning-tab label="Chatter" title="Show Chatter Feed">
+            <h3>This is Chatter feed  Tab</h3>
+        </lightning-tab>
+
+        <lightning-tab label="Activities" title="Show Activies">
+            <h4>This is Activities</h4>
+              <lightning-tabset variant="vertical">
+                 <lightning-tab label="New Task" icon-name="utility:task" >
+                    <h1>This is for new Event</h1>
+                      <lightning-input 
+                        type="text"
+                        label="Enter some text"
+                      ></lightning-input>
+                      <lightning-input label="task description"></lightning-input>
+                      <lightning-input label="Activity Date" type="date"></lightning-input>
+                      <p align="center">
+                        <lightning-button label="Save" variant="brand"></lightning-button>
+                      </p>
+                 </lightning-tab>
+                 <lightning-tab label="NeW Event" icon-name="utility:event">
+                    <h1>This is New Event</h1>
+                 </lightning-tab>
+                 <lightning-tab label="Log A Call" icon-name="utility:call">
+                    <h1>This is New Call</h1>
+                 </lightning-tab>
+              </lightning-tabset>
+        </lightning-tab>
+
+    </lightning-tabset>
+    </div>
+</template>

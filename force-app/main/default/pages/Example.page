@@ -1,0 +1,3 @@
+<apex:page setup="false" sidebar="false" showHeader="true" tabStyle="Lead">
+  
+</apex:page>

@@ -1,0 +1,17 @@
+<template>
+     <div>
+         <lightning-input      label="Enter Details" 
+                                onchange={handleOnChange}
+                                 name={lblSearchText}
+                                 value={searchContext}></lightning-input>
+        
+     </div>
+     <lightning-button label="Search Records " variant="brand"
+                           onclick={handleClick}></lightning-button>
+
+     <lightning-card title="Search Accont Records" icon-name="standard:account">
+           <lightning-datatable data={recordResult}
+                              columns={columns}
+                              key-field="Id" ></lightning-datatable>
+     </lightning-card>
+</template>

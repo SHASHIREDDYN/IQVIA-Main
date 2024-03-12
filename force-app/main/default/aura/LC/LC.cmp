@@ -1,0 +1,11 @@
+<aura:component>
+    
+    <div class="Box">
+        <lightning:input type="number" label="Enter a First number" aura:id="fnum"/>
+        <lightning:input type="number" label="Enter a Second number" aura:id="snum"/>
+        <lightning:input type=" number" label="Addition" aura:id="Add"/>
+        
+        <lightning:button label="Addtion" variant="brand" onclick="{!c.ShowAddition}"/>
+     
+    </div>
+</aura:component>

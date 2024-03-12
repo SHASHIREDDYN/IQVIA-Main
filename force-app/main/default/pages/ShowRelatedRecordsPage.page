@@ -1,0 +1,54 @@
+<apex:page controller="ShowRelatedRecordsPageController" setup="false" sidebar="false" showHeader="true" tabStyle="Customer__c">
+<apex:sectionHeader title="Picklist" subtitle="Realted Reocrds"/>
+<apex:form >
+  <Apex:pageBlock title="Account Record Block">
+      <apex:pageblockSection title="Account Records Section" columns="1" collapsible="true">
+        <apex:selectList label="Select the Account Name :" multiselect="false" size="1" value="{!SelectedAccountID}">
+          
+          <apex:actionSupport event="onchange" action="{!GetRelateRecords}" reRender="cnBlock,opBlock,csBlock"/>
+          
+          <apex:selectoptions value="{!lstOptions}"></apex:selectoptions>
+        
+        </apex:selectList> 
+      </apex:pageblockSection>
+  </Apex:pageBlock>
+  
+  <apex:pageblock title="Related Contacts :({!lstcon.size} )" id="cnBlock">
+     <apex:pageblockTable value="{!lstCon}" var="con">
+          <apex:column headerValue="Contact Name">
+               <apex:outputLink value="/{!con.id}" target="_blank">{!con.firstname}{!con.lastname}</apex:outputLink>
+          </apex:column>
+          <apex:column value="{!con.Title}"/>
+          <apex:column value="{!con.Phone}"/>
+          <apex:column value="{!con.Fax}"/>
+          <apex:column value="{!con.Email}"/>
+         
+     </apex:pageblockTable>
+  </apex:pageblock>
+  
+  <apex:pageblock title="Related Opportunities :({!lstOpp.size})" id="opBlock">
+     <apex:pageblockTable value="{!lstOpp}" var="op">
+        <apex:column headervalue="Opportunity Name">
+             <apex:outputLink value="/{!op.id}" target="_blank">{!op.Name}</apex:outputLink>
+         </apex:column>
+         <apex:column value="{!op.StageName}"/>
+         <apex:column value="{!op.Amount}"/>
+         <apex:column value="{!op.closedate}"/>
+     </apex:pageblockTable>
+  </apex:pageblock>
+  
+  <apex:pageblock title="Realted Cases :( {!lstCases.size})" id="csBlock">
+     <apex:pageBlocktable value="{!lstCases}" var="cs">
+        <apex:column headerValue="Case Name">
+            <apex:outputLink value="/{!cs.id}" target="_blank">{!cs.CaseNumber}</apex:outputLink>
+        </apex:column>
+        <apex:column value="{!cs.Priority}"/>
+        <apex:column value="{!cs.Status}"/>
+        <apex:column value="{!cs.Type}"/>
+        <apex:column value="{!cs.Reason}"/>
+        <apex:column value="{!cs.Origin}"/>
+        <apex:column value="{!cs.Subject}"/>
+     </apex:pageBlocktable>
+  </apex:pageblock>
+</apex:form>
+</apex:page>

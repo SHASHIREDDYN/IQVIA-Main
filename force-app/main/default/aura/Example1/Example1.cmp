@@ -1,0 +1,10 @@
+<aura:component >
+    <div>
+    Name: N shashidhar<br/><br/>
+    Disignation:Engineer<br/><br/>
+    Mobile: 9494996780<br/><br/>
+    Cty: Hyderabad<br/><br/>
+    </div>
+    
+    <c:Child/>
+</aura:component>

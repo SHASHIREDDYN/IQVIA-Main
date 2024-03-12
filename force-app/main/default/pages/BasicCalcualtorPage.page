@@ -1,0 +1,26 @@
+<apex:page controller="Bascicalculator"  setup="false" sidebar="false" showHeader="true" tabStyle="Hiring_Manager__c">
+  
+<apex:sectionHeader title="Calculator" subtitle="Basic Calculator"/>
+<apex:form >
+
+<apex:pagemessages id="errors"></apex:pagemessages>
+
+<apex:pageblock title="Basic Calcualtor Block "> 
+   <apex:pageblockButtons location="both">
+   
+      <apex:commandButton value="Addition" action="{!Addition}" rerender="res,errors"/>
+      <apex:commandButton value="Subtraction" action="{!Subtraction}" rerender="res,errors"/>
+     
+  </apex:pageblockButtons>
+
+ <apex:pageblockSection title="Calcualtor" columns="1" collapsible="true" >
+           <apex:inputText label="Enter First Number  :" html-placeholder="Enter First Number" value="{!firstNumber}"/>
+           <apex:inputText label="Enter Second Number :" html-placeholder="Enter Second Number" value="{!secondNumber}"/>
+         <apex:outputLabel id="res" ><b> Operation Result is...:{!result} </b></apex:outputLabel>
+           
+</apex:pageblockSection>
+</apex:pageblock>
+</apex:form>
+  
+  
+ </apex:page>

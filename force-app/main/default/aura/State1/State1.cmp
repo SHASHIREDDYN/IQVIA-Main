@@ -1,0 +1,12 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<p>
+    This is text from State1
+    </p>
+    
+    <P>
+        <c:StateaDistrict1/>
+    </P>
+    <p>
+        <c:StateaDistrict2/>
+    </p>
+</aura:component>

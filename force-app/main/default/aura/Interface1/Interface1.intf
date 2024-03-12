@@ -1,0 +1,7 @@
+<aura:interface description="Interface template">
+
+  <aura:attribute name="Fname" type="String" default="" description="An example attribute"/>
+  <aura:attribute name="Phone" type="string"/>
+  <aura:attribute name="Age" type="integer"/>
+
+</aura:interface>

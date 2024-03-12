@@ -1,0 +1,14 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="empname" type="string" />
+    <aura:attribute name="age" type="integer" />
+    <aura:attribute name="salary" type="Decimal"/>
+    
+    <lightning:button variant="brand" label="Submit" title="Base action" onclick="{! c.Call }"/>
+    <div>
+        {!v.empname}<br/>
+        {!v.age}<br/>
+        {!v.salary}<br/>
+    </div>
+    
+    
+</aura:component>

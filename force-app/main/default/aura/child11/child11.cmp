@@ -1,0 +1,18 @@
+<aura:component  controller="ApexEvet">
+    <aura:attribute name="mylist" type="Contact[]"/>
+    <aura:handler event="c:Accevt" action="{!c.invoke}"/>
+    <div class="box">
+    <table width="100%">
+        <tr width="100%">
+            <th> Last Name</th>
+            <th> First Name</th>
+      <aura:iteration items="{!v.mylist}" var="a">
+          <tr width="100%">
+              <th>{!a.lastName}</th>
+              <th>{!a.firstName}</th>
+          </tr>
+      </aura:iteration>
+        </tr>
+    </table>
+    </div>
+</aura:component>

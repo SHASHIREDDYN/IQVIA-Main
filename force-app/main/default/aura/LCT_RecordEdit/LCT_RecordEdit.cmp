@@ -1,0 +1,25 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+   <!-- <aura:attribute name="recordId" type="string"/>
+    
+	<lightning:recordEditForm ObjectApiName="Account" recordid="{!v.recordId}">
+        
+        <lightning:inputField aura:id="filed" fieldName="Name"/>    
+        <lightning:inputField aura:id="field" filedName="Industry"/>
+        
+        <lightning:button label="Cancel" onclick="{!c.handleReset}"/>
+        <lightning:button label="Save Record" type="Submit"/>
+    </lightning:recordEditForm>-->
+    
+    <lightning:recordEditForm objectApiName="Account" >
+        <lightning:messages />
+        <lightning:inputField aura:id="field" fieldName="Name" />
+        <lightning:inputField aura:id="field" fieldName="Industry" />
+
+            <div class="slds-m-top_medium">
+            <lightning:button label="Cancel" onclick="{!c.handleReset}" />
+            <lightning:button type="submit" label="Save Record" />
+        </div>
+    </lightning:recordEditForm>
+    
+</aura:component>

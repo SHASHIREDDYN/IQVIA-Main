@@ -1,0 +1,36 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="recordId" type="String"/>
+    <aura:attribute name="targetRec" type="Object"/>
+    <aura:attribute name="accRecord" type="Object"/>
+    <aura:attribute name="error" type="String"/>
+    
+    <force:recordData aura:id="record"
+                           recordId="{!v.recordId}"
+                           layoutType="FULL"
+                           fields="Id,Name,Phone,Rating"
+                           targetRecord="{!v.targetRec}"
+                           targetFields="{!v.accRecord}"
+                           targetError="{!v.error}"/>
+    <lightning:card iconName="standard:account" title="{!v.accRecord.Name}">
+    <div class="slds-p-horizontal_small">
+        <p class="slds-p-horizontal_small">
+          <b>Name:</b>  <lightning:formattedText value="{!v.accRecord.Name}"/>
+        </p>
+        
+        <p class="slds-p-horizontal_small">
+           <b>Phone:</b> <lightning:formattedPhone value="{!v.accRecord.Phone}"/>
+        </p>
+        
+        <p class="slds-p-horizontal_small">
+           <b>Rating:</b> <lightning:formattedText value="{!v.accRecord.Rating}"/>
+        </p>
+    </div>
+    </lightning:card>
+    
+    <aura:if isTrue="{!not(empty(v.error))}">
+    <div>
+        <p class="slds-p-horizontal_small" >{!v.error}</p>
+    </div>
+    </aura:if>
+    <lightning:button label="Save" onclick="{!c.invoke}"/>
+</aura:component>

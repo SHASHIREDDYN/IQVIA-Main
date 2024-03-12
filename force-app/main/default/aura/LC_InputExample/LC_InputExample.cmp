@@ -1,0 +1,70 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    
+   <!-- <div class='RegistrationDetails'><br/><br/>
+           <b><u><center>Customer Registration Details</center></u></b>
+           <lightning:avatar src="/bad/image/url.jpg" initials="" fallbackIconName="standard:account" alternativeText="Salesforce" class="slds-m-right_small"/>
+
+           <lightning:input label='Enter First Name' name='fname' required='true' type='text' title='FirstName only enter' />
+           <lightning:input label='Enter Last Name' name='lname' required='true' title='Last Name Only'/>
+           <lightning:input label='Age' type='number'/>
+           <lightning:input label='Enter Email' type='email'/>
+           <lightning:input label='Phone' type='tel' place-holder='Enter Phone Number here'/>
+           <lightning:input label='Salary' type='number'/>
+           <lightning:input label='Enter a country' type='text'/>
+        
+        <lightning:select label="Select country name" required='true' title='select any value'>
+             <option value=''>NONE</option>
+             <option value='ind'>INDIA</option>
+             <option value='chi'>CHINA</option>
+             <option value='usa'>United States of America</option>
+        </lightning:select>
+        
+        <lightning:select label="Select state name" required="true" title="Select any value">
+             <option value="">NONE </option>
+             <option value="TS">TELANGANA </option>
+             <option values="AP">Andhra Pradesh</option>
+             <option values="MH">MahaRastr</option>
+        </lightning:select> 
+        
+         <lightning:input label='Enter a City' type='text'/>
+         <lightning:input label='Enter the passowrd' type='password'/>
+         <lightning:input label='Enter confirm passowrd' type='password'/>
+        
+      
+        
+       
+        
+        <lightning:input label='Enter website name' type='url'/>
+        <lightning:input label='Upload' type='file' multiple='true' accept='.doc,.docx,.pdf'/>
+        <lightning:input label='Joining our Mailing List' type='checkbox'/>
+        <lightning:input label='Follow our news' type='checkbox-button' title='enter a value'/>
+        <lightning:input label='send updates' type='toggle' checked='true'/>
+
+   </div> -->
+    
+    <div class="RegistrationDetails"> <br/> <br/>
+        <b><u> <center>Customer Registration Form</center></u></b>
+        
+        <lightning:input label="Enter first Name" name="fname" type="text" fieldLevelHelp="Enter Required Text to Help" />
+        <lightning:input label="Enter last name" name="lname" type="text" />
+        <lightning:input label="Enter phone number" type="tel" placeholder="Please enter contact number" required="true"/>
+        <lightning:input label="Enter Email Address" type="email" />
+        <lightning:input label="please select file here" type="file" multiple="true"/>
+        <lightning:input label="Enter PAN number" type="text" pattern="[A-Z]{5}-[0-9]{4}-[A-Z]{1}"/>
+        <lightning:input label="Age" type="number"/>
+        <lightning:input label="password" type="password"/>
+        <lightning:input label="Enter a url " type="url"/>
+        <lightning:input label="Send updates" type="toggle"/>
+        <lightning:input lable="Are you Joing the company" type="checkbox"/>
+        <lightning:input label="Joing Date" type="date"/>
+        <lightning:input label="Checked" type="checkbox-button"/>
+        <lightning:select label="select a state name here" required="true" title="select any one">
+          <option value="">---NONE---</option>
+          <option value="TS"> Telangana</option>
+          <option values="AP">Andhra Pradesh</option>
+        </lightning:select>
+        
+    </div>
+                     
+</aura:component>

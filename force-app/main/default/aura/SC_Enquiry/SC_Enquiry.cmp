@@ -1,0 +1,22 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	
+    <lightning:recordEditform objectApiName="Enquiry__c">
+        
+        <h1 align="center"><b>Enquiry</b></h1>
+        
+        <lightning:accordion>
+            <lightning:accordionsection label='Enquiry Details'>
+        <table>
+            <tr>
+                <td><lightning:inputField fieldName='Name'/></td>
+                <td><lightning:inputField fieldName='Branch__c' variant="label-inline"/> </td>
+            </tr>
+        </table>
+        
+            </lightning:accordionsection>
+        
+        </lightning:accordion>
+        
+
+   </lightning:recordEditform>
+</aura:component>

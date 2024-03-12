@@ -1,0 +1,9 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+    <aura:attribute name="Login"  type="string" description="Enter loginName"/>
+    <aura:attribute name="Password"  type="string"  description="Password Must be 6 characters"/>
+    
+     <lightning:input  value="{!v.Login}" label="Please enter first value" required="true"/>
+    <lightning:input value="{!v.Password}" label="Please enter second value" required="true"/>
+    	
+</aura:component>

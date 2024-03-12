@@ -1,0 +1,10 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    <div class="box">
+    <lightning:ProgressIndicator currentStep="2"  type="path" haserror="false">
+        <lightning:progressStep label="step1" value="1"/>
+        <lightning:progressStep label="step2" value="2"/>
+        <lightning:progressStep label="step3" value="3"/>
+        <lightning:progressStep label="ste42" value="4"/>
+    </lightning:ProgressIndicator>
+    </div>
+</aura:component>

@@ -1,0 +1,7 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	<h1>HI how you doing</h1>
+    
+    <div class="yellow">  yellow</div>
+    <div class="blue"> blue</div>
+    <div class="red">  red </div>
+</aura:component>

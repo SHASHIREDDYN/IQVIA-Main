@@ -1,0 +1,12 @@
+<aura:component >
+    <aura:attribute name="Name" type="string"/>
+    <aura:attribute name="Salary" type="Decimal"/>
+    <lightning:button variant="success" label="SetData" title="Success" onclick="{! c.show }"/>
+    <lightning:button variant="success" label="Cancel" title="Success" onclick="{! c.invoke }"/>
+  <div>
+    
+      Name:{!v.Name}<br/><br/>
+      Salary:{!v.Salary}<br/><br/>
+  </div>
+
+</aura:component>

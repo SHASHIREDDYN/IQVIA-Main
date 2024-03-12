@@ -1,0 +1,43 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name='recordId' type='string'/>
+    <aura:attribute name='targetRec' type='object'/>
+    <aura:attribute name='newAcc' type='object'/>
+    <aura:attribute name='error' type='string'/>
+
+    <force:recordData aura:id="record"
+                     recordId="{!v.recordId}"
+                     LayoutType='full'
+                     fields='Id,Name,Rating,Phone'
+                     targetRecord="{!v.targetRec}"
+                     targetFields="{!v.newAcc}"
+                     targeterror="{!v.error}"
+                      mode="EDIT"
+                     />
+    
+    <lightning:card iconName="standard:Account" title='{!v.newAcc.name}'>
+       <div class="slds-p-horizontal_small">
+         <p class="slds-p-horizontal_small">
+             <lightning:input label='AccountName' value="{!v.newAcc.Name}"/>
+         </p> 
+         <p class="slds-p-horizontal_small">
+             <lightning:input label='AccountRating' value="{!v.newAcc.Rating}"/>
+          </p>
+         <p class="slds-p-horizontal_small">
+             <lightning:input label='AccountPhone' value="{!v.newAcc.Phone}"/>
+         </p>
+       </div>
+        
+        <div class="slds-p-horizontal_Big">
+            <lightning:button label="Save" onclick="{!c.invoke}"/>
+        </div>
+        
+        
+    
+    </lightning:card>
+    
+    <aura:if isTrue="{!not(empty(v.error))}">
+       <div>
+          <p class="slds-p-horizontal_small">{!v.error}</p>
+        </div>
+    </aura:if>
+</aura:component>

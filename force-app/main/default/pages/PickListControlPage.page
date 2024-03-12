@@ -1,0 +1,38 @@
+<apex:page setup="true" sidebar="false" showHeader="true" tabStyle="Customer__c">
+<apex:sectionHeader title="PickList Controls" subtitle="Input Controls"/>
+<apex:form >
+      <apex:pageblock title="PickList Control Block">
+          <apex:pageBlockSection title="Pickist Control Section" columns="1" collapsible="true">
+                 <apex:selectList label="Select the Country" multiselect="false" size="1">
+                    <apex:selectOption itemLabel="----NONE----" itemValue=""></apex:selectOption>
+                    <apex:selectOption itemLabel="India" itemvalue="IND"></apex:selectOption>
+                    <apex:selectOption itemLabel="China" itemvalue="CHI"></apex:selectOption>
+                    <apex:selectOption itemLabel="USA" itemvalue="USA"></apex:selectOption>
+                    <apex:selectOption itemLabel="UAE" itemvalue="UAE"></apex:selectOption>
+                 </apex:selectList>
+          </apex:pageBlockSection>
+          
+          <apex:pageblockSection title="MultiSelect Picklist Section" columns="1" collapsible="true">
+              <apex:selectradio label="Radio Button controls" bordervisible="true">
+                 <apex:selectOption itemLabel="Chess" itemvalue="Chess" ></apex:selectOption>
+                 <apex:selectOption itemLabel="Cricket" itemvalue="Cricket" ></apex:selectOption>
+                 <apex:selectOption itemLabel="Tennis" itemvalue="Tennis" ></apex:selectOption>
+                 <apex:selectOption itemLabel="Hockey" itemvalue="Hockey" ></apex:selectOption>
+                 <apex:selectOption itemLabel="Musci" itemvalue="Music" ></apex:selectOption>
+                 <apex:selectOption itemLabel="Dance" itemvalue="Dance" ></apex:selectOption>
+         </apex:selectradio>
+          </apex:pageblockSection>
+          <apex:pageblockSection title="CheckBoxPicklist Section" columns="1" collapsible="true">
+              <apex:selectcheckboxes label="Select the Hobbies"  bordervisible="true">
+                 <apex:selectOption itemLabel="Chess" itemvalue="Chess" ></apex:selectOption>
+                 <apex:selectOption itemLabel="Cricket" itemvalue="Cricket" ></apex:selectOption>
+                 <apex:selectOption itemLabel="Tennis" itemvalue="Tennis" ></apex:selectOption>
+                 <apex:selectOption itemLabel="Hockey" itemvalue="Hockey" ></apex:selectOption>
+                 <apex:selectOption itemLabel="Musci" itemvalue="Music" ></apex:selectOption>
+                 <apex:selectOption itemLabel="Dance" itemvalue="Dance" ></apex:selectOption>
+          </apex:selectcheckboxes>
+          </apex:pageblockSection>
+          
+      </apex:pageblock>
+</apex:form>  
+</apex:page>

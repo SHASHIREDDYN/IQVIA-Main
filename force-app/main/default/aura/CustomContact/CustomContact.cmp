@@ -1,0 +1,45 @@
+<!--<aura:handler name="init" value="{!this}" action="{!c.doInitialization}"/>
+
+    <aura:attribute name="existingContactList" type="contact[]"/>
+    <lightning:overlayLibrary aura:id="overlayLib"/>
+    <aura:attribute name="contactNumber" type="string"/>
+    
+    <lightning:card title="{!v.contactNumber}" iconName="standard:contact">
+        
+        <aura:set attribute="actions">
+            <lightning:button label="New" onclick="{!c.addContact}"/>
+        </aura:set>
+        <p class="slds-p-horizontal_small">
+            <aura:iteration items="{!v.existingContactList}" var="con">
+                <a href="{!'https://myknowndomain-dev-ed.lightning.force.com/'+con.Id}" >
+                {!con.Name}
+                 </a> 
+                <p>Title:{!con.Title}</p>
+                <p>Email:{!con.Email}</p>
+                <p>Phone:{!con.Phone}</p> 
+              <br></br>
+            </aura:iteration>
+        </p>
+       <aura:set attribute="footer">
+        <a href="javascript:void(0)" onclick="{!c.navigateToRelatedList}">
+            View All
+        </a>
+        </aura:set>
+    </lightning:card>-->
+
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId">
+
+    
+    <aura:attribute name="filetype" type="List" default="['.png', '.jpg', '.jpeg']" />
+    <aura:attribute name="multiple" type="Boolean" default="true" />
+    <aura:attribute name="disabled" type="Boolean" default="true" />
+    <aura:attribute name="recordId" type="String" />
+    <lightning:fileUpload label="Attach receipt"
+        name="fileUploader"
+        multiple="true"
+        accept="{!v.filetype}"
+        recordId="{!v.recordId}"
+        onuploadfinished="{!c.handleUploadFinished}" />
+
+
+</aura:component>

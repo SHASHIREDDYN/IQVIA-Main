@@ -1,0 +1,25 @@
+<aura:component >
+    <aura:attribute name="Empname" type="List" default="[
+        {'label': 'Mr.', 'value': 'Mr.'},
+        {'label': 'Ms.', 'value': 'Ms.'},
+        {'label': 'Mrs.', 'value': 'Mrs.'},
+        {'label': 'Dr.', 'value': 'Dr.'},
+        {'label': 'Prof.', 'value': 'Prof.'},
+    ]"/>
+    <aura:attribute name="exp" type="Decimal"/>
+    <aura:attribute name="salary" type="Decimal"/>
+    
+    <div class="box">
+        <lightning:inputName options="{!v.Empname}" />
+    
+    <lightning:input  type="number" label="Enter exp" vaue="{!v.exp}" />
+    <lightning:input  type="number" label="salary" value="{!v.salary}"/>
+    
+    <br/>
+    
+            <lightning:button variant="brand" label="Submit"  onclick="{!c.show}"/>
+
+
+   
+    </div>
+</aura:component>

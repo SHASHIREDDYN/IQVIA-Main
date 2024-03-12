@@ -1,0 +1,10 @@
+<apex:page controller="SourcePageController" setup="false" sidebar="false" showChat="true" tabStyle="Solution">
+<apex:sectionHeader title="Page Redirection" subtitle="Source Page"/>
+<apex:form >
+            <apex:pageBlock title="Source Page Block">
+              <apex:pageBlockButtons location="top">
+                   <apex:commandButton value="Next Page" action="{!GotoTargetPage}"/> 
+               </apex:pageBlockButtons>
+            </apex:pageBlock>
+</apex:form>
+</apex:page>

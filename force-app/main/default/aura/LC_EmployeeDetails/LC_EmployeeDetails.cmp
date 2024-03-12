@@ -1,0 +1,17 @@
+<aura:component >
+
+    <aura:attribute name='empname' type='string'/>
+    <aura:attribute name='salary' type='decimal'/>
+    
+    <lightning:button label='setdata' value="{!c.show}"/>
+    <lightning:button label='cancel' value="{!c.cancel}"/>
+    
+    <br/>
+    <div>
+         Name :{!v.empname}<br/><br/>
+    Salary:{!v.salary}
+    </div>
+   
+       
+        
+</aura:component>

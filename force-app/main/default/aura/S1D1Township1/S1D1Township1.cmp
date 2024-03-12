@@ -1,0 +1,11 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<p>
+    This text is from State1  District1 Township1 
+    </p>
+    
+    <aura:registerEvent  name="LowPriorityComplaintFromTownship1" type="c:ComponentEventWithComplaintmsg"/>
+    <lightning:button label="Submit My LP Complaints" aura:id="LPB" name="LPComplaintB" onclick="{!c.forwardLPComplint}"/>
+    <lightning:button label="Submit My MP Complaints" aura:id="MPB" name="MPComplaintB" onclick="{!c.forwardMPComplint}"/>
+    <lightning:button label="Submit My HP Complaints" aura:id="HPB" name="HPComplaintB" onclick="{!c.forwardHPComplint}"/>
+
+</aura:component>

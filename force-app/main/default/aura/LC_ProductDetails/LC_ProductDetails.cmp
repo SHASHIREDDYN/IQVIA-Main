@@ -1,0 +1,10 @@
+<aura:component >
+	<b> <u> Product Details Form</u></b><br/>
+            Product Code is:4564<br/>
+            product Name is:Wasing Machib<br/>
+            Manufcturer is:LG<br/>
+            Contact number:998947582<br/>
+            Email Address:shadhi@gmail.com<br/>
+            Unit price is:50000<br/>
+            Avialable is stock:50000<br/>
+</aura:component>

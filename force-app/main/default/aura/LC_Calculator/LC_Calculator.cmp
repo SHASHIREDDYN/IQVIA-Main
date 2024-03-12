@@ -1,0 +1,18 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <aura:attribute name="amount" type="Decimal"/>
+     <aura:attribute name="year" type="Decimal"/>
+    <aura:attribute name="rate" type="Decimal"/>
+    <aura:attribute name="interest" type="Decimal"/>
+
+    <aura:handler name="init" value="{!this}" action="{!c.invoke}"/> 
+    
+    <div>
+    
+        Amount :{!v.amount}<br/>
+        Year   :{!v.year}<br/>
+        Rate   :{!v.rate}<br/>
+        Intrest  :{!v.interest}
+       
+    </div>
+    
+</aura:component>

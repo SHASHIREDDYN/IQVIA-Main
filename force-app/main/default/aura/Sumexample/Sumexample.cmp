@@ -1,0 +1,15 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes" access="global" >
+    
+    <aura:attribute name="aval" type="integer"/>
+    <aura:attribute name="bval" type="integer"/>
+    <aura:attribute name="result" type="integer"/>
+       
+
+    <lightning:input type="number" name="FirstNumber" label="Enter A FirstNumber" required="true" value="{!v.aval}" />
+    <lightning:input type="number" name="FirstNumber" label="Enter A SecondNumber" required="true" value="{!v.bval}" />
+  
+    Result is:  {!v.result} <br/><br/>
+   <lightning:button variant="brand" label="Add"  title="Brand action" onclick="{!c.Add}"/>
+
+   
+</aura:component>

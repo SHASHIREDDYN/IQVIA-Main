@@ -1,0 +1,9 @@
+<aura:component >
+    <lightning:input label='first name' aura:id='lname' type='string'/>
+    <lightning:input label='last name' aura:id='fname' type='string'/>
+    <lightning:input label='active' type='checkbox'/>
+    <lightning:input label="DOB" type='date' />
+    <lightning:input label='search account' type='search'/>
+    <lightning:input label='search account' type='label-hidden'/>
+    <lightning:button label="Submit" onclick="{!c.invoke}"/>
+</aura:component>

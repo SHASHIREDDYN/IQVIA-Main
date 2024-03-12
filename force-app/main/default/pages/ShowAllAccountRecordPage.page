@@ -1,0 +1,22 @@
+<apex:page controller="ShowAllAccountRecordController" setup="false" sidebar="false" showHeader="true" tabStyle="Customer__c">
+<apex:sectionHeader title="Accounts" subtitle="All Accounts"/>
+<apex:form >
+        <apex:pageBlock title="All Accounts  : ({!lstAccounts.Size}) ">  
+        
+        <apex:pageblockTable value="{!lstAccounts}" var="acc">
+        
+             <apex:column headerValue="Account Name">
+                         <apex:outputLink value="/{!acc.id}" target="_blank">{!acc.Name} </apex:outputLink>
+             </apex:column>
+              <apex:column value="{!acc.Rating}"/>
+             <apex:column value="{!acc.Industry}"/>
+             <apex:column value="{!acc.Fax}"/>
+             <apex:column value="{!acc.Phone}"/>
+        
+        </apex:pageblockTable>
+        
+        </apex:pageBlock>
+
+</apex:form>
+  
+</apex:page>

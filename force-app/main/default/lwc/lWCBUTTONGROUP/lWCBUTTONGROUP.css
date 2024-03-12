@@ -1,0 +1,10 @@
+div
+{
+  border: 10px solid black;
+  width: 500px;
+  background-color: white;
+  margin-top: 10px;
+  margin-left: 10px;
+  padding-top: 50px;
+  padding-left: 50px;
+}

@@ -1,0 +1,58 @@
+<apex:page standardcontroller="Account" setup="false" sidebar="false" showHeader="true" tabStyle="Customer__c">
+<apex:sectionHeader title="Account Edit" subtitle="NewAccount"/> 
+
+<apex:form >
+
+<apex:pageBlock title="Account Edit">
+
+
+<apex:pageBlockButtons Location="Both">
+
+<apex:commandButton value="Save" action="{!Save}"/>
+<apex:commandButton value="Cancel" action="{!Cancel}"/>
+<apex:commandButton value="Save & new" action="{!Save}"/>
+
+</apex:pageBlockButtons>
+
+
+
+<apex:pageblockSection title="Account Information" columns="2" collapsible="true">
+     <apex:inputField value="{!Account.Name}"/>
+     <apex:inputField value="{!Account.Rating}" required="true"/>
+     <apex:inputField value="{!Account.Industry}"/>
+     <apex:inputField value="{!Account.Annualrevenue}"/>
+     <apex:inputField value="{!Account.Type}"/>
+     <apex:inputField value="{!Account.ownership}"/>
+     <apex:inputField value="{!Account.Site}"/>
+     <apex:inputField value="{!Account.website}"/>
+     <apex:inputField value="{!Account.PAN_NUMBER__c}" required="true"/>
+     <apex:inputField value="{!Account.Share_Record_To_User__c}"/>
+</apex:pageBlockSection>
+
+<apex:pageblockSection title="Contact Deatails" columns="2" collapsible="true">
+    <apex:inputField value="{!Account.Phone}" required="true"/>
+    <apex:inputField value="{!Account.Fax}"/>
+</apex:pageBlockSection>
+
+<apex:pageBlockSection title="Address Information" columns="2" collapsible="true">
+   <apex:inputField value="{!Account.Billingcity}"/>
+   <apex:inputField value="{!Account.Shippingcity}"/>
+   <apex:inputField value="{!Account.Billingstate}"/>
+   <apex:inputField value="{!Account.Shippingstate}"/>
+   <apex:inputField value="{!Account.Billingcountry}"/>
+   <apex:inputField value="{!Account.Shippingcountry}"/>
+   <apex:inputField value="{!Account.BillingStreet}"/>
+   <apex:inputField value="{!Account.ShippingStreet}"/>
+</apex:pageBlockSection>
+
+<apex:pageBlockSection title="Additional Information" columns="2" collapsible="true">
+  <apex:inputField value="{!Account.CustomerPriority__c}"/>
+  <apex:inputField value="{!Account.Active__c}"/>
+</apex:pageBlockSection>
+
+
+</apex:pageBlock>
+
+</apex:form>
+  
+</apex:page>

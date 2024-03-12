@@ -1,0 +1,43 @@
+<template>
+    <lightning-card title="Account Details" icon-name="standard:account">
+        <lightning-record-edit-form object-api-name={salesforceobjectApiName} 
+                                    onsuccess={successToastMessage}
+                                    onerror={errorToastMessage}>
+            <table>
+                <tr>
+                    <td><lightning-input-field field-name="Name"></lightning-input-field></td>
+                    <td><lightning-input-field field-name="Rating"></lightning-input-field></td>
+
+                </tr>
+                <tr>
+                    <td><lightning-input-field field-name="Industry"></lightning-input-field></td>
+                    <td><lightning-input-field field-name="AnnualRevenue"></lightning-input-field></td>
+
+                </tr>
+                <tr>
+                    <td><lightning-input-field field-name="Phone"></lightning-input-field></td>
+                    <td><lightning-input-field field-name="Fax"></lightning-input-field></td>
+
+                </tr>
+                <tr>
+                    <td><lightning-input-field field-name="Ownership"></lightning-input-field></td>
+                    <td><lightning-input-field field-name="Website"></lightning-input-field></td>
+
+                </tr>
+                <tr>
+                    <td><lightning-input-field field-name="Namespace0207__PAN_NUMBER__c"></lightning-input-field></td>
+                    <td><lightning-input-field field-name="Type"></lightning-input-field></td>
+
+                </tr>
+
+
+              </table>
+
+              <br/> <br/>
+              <p align="center">
+                <lightning-button label="Save" type="submit" variant="brand"></lightning-button>
+              </p>
+            
+        </lightning-record-edit-form>
+    </lightning-card>
+</template>

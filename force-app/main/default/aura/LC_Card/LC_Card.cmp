@@ -1,0 +1,46 @@
+<aura:component >
+   <div>
+      <lightning:card  iconName="standard:account" footer="All rights reserved by Salesforce">
+         <aura:set attribute="title">
+            Account<br/>
+            <b>Edge Communications</b>
+         </aura:set>
+         <aura:set attribute='actions'>
+            <lightning:buttonGroup>
+               <lightning:button label='New Contact' variant='brand-outline'/>
+               <lightning:button label='New Opportunity' variant='brand-outline'/>
+               <lightning:button label='New Case' variant='brand-outline'/>
+               <lightning:button label='New Note' variant='brand-outline'/>
+               <lightning:buttonmenu  variant='brand-outline'  title='select a field' >
+                  <lightning:menuItem label="Create a record"></lightning:menuItem>
+                  <lightning:menuItem label="New Opportunity"></lightning:menuItem>
+                  <lightning:menuItem label="Change Owner"></lightning:menuItem>
+               </lightning:buttonmenu>
+            </lightning:buttonGroup>
+         </aura:set>
+         <div>
+            <table>
+               <tr>
+                  <th>Name</th>
+                  <th>Phone</th>
+                  <th>Rating</th>
+                  <th>Email</th>
+               </tr>
+               <tr>
+                  <td> Naresh</td>
+                  <td>9959275387</td>
+                  <td> Hot</td>
+                  <td> shashireddy@gmail.com</td>
+               </tr>
+               <tr>
+                  <td> Naresh</td>
+                  <td>9959275387</td>
+                  <td> Hot</td>
+                  <td> shashireddy@gmail.com</td>
+               </tr>
+            </table>
+             
+         </div>
+      </lightning:card>
+   </div>
+</aura:component>

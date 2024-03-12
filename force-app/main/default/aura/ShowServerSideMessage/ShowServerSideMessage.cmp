@@ -1,0 +1,7 @@
+<aura:component controller="ApexClassBasics" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <div>
+    <lightning:input label="Show Server Message" type="text" aura:id="result"/>
+    
+    <lightning:button label="Message" variant="brnad" onclick="{!c.ShowCallMessage}"/>
+        </div>
+</aura:component>

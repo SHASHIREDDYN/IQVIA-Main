@@ -1,0 +1,15 @@
+<aura:component controller="Apex" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+   <!-- <aura:attribute name="Name" type="string"/>
+    <aura:attribute name="Salary" type="decimal"/>
+    
+    
+    <div>
+        Name:{!v.Name}<br/>
+        Salary:{!v.Salary}                    
+    </div>
+    
+    <lightning:button label="SetData" onclick="{!c.Show}"/>
+    <lightning:button label="Cancel" onclick="{!c.Invoke}"/>-->
+    
+    
+</aura:component>

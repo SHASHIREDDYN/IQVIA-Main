@@ -1,0 +1,11 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	
+    <aura:attribute name="a1" type="integer" default="15"/>
+    <aura:attribute name="a2" type="integer" default="10"/>
+    
+    <aura:attribute name="multiply" type="integer" default="150"/>
+    
+    {!v.a1}*{!v.a2}={!v.multiply}
+    <br></br>
+    <ui:button label="multiply click me"/>
+</aura:component>

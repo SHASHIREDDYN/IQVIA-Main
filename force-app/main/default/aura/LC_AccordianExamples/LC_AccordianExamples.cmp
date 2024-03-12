@@ -1,0 +1,39 @@
+<aura:component >
+	<!--<lightning:accordion activesectionname='basic info'>
+        <lightning:accordionsection name="basic info" label="Customer Basic info">
+            <lightning:input label='Firstname' aura:id="fname"/>
+            <lightning:input label='Lastname' aura:id="lname"/>
+            <lightning:input label='company' aura:id="company"/>
+        </lightning:accordionsection>
+       <lightning:accordionsection name="Education" label="Education info">
+            <lightning:input label='College' aura:id="cname"/>
+            <lightning:input label='year' aura:id="year"/>
+            <lightning:input label='Branch' aura:id="branch"/>
+        </lightning:accordionsection>
+       <lightning:accordionsection name="com" label="Communication info">
+            <lightning:input label='Phone' aura:id="phone"/>
+            <lightning:input label='Email' aura:id="email"/>
+            <lightning:input label='Mobile' aura:id="mobile"/>
+        </lightning:accordionsection>
+    </lightning:accordion>-->
+    <lightning:accordion activesectionname="b">
+        <lightning:accordionsection label="Accout Details" name='a'>
+            Account Name:<br/>
+            Account Industry:<br/>
+            Account Phone:<br/>
+           
+        </lightning:accordionsection>
+        <lightning:accordionsection label="Contact Details" name='b'>
+            Conact Name:"<br/>
+            Contacr Phone:<br/>
+            COntact Email:<br/>
+            
+            <aura:set attribute="actions">
+            <lightning:button label='Submit' onclick="{!v.Get}"/>
+            <lightning:button label="Cancel" onclick="{!v.Cancel}"/>
+        </aura:set>
+        </lightning:accordionsection>
+        
+    
+    </lightning:accordion>
+</aura:component>

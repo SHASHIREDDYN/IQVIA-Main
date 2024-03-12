@@ -1,0 +1,39 @@
+<apex:page controller="SearchAccountController" setup="false" sidebar="false" showHeader="true" tabStyle="Customer__c">
+<apex:sectionHeader title="Accounts" subtitle="Search Account Records"/>
+  <apex:form >
+  
+  <apex:pageMessages id="errors"></apex:pageMessages>
+  
+  
+      <apex:pageBlock title="Search Accounts Block">
+         <apex:pageblockSection title="Search Account Records" columns="2" collapsible="false" >
+           <apex:inputtext label="Enter Search Text : " html-placeholder="Enter Search Text" value="{!SearchText}"/>
+           <apex:commandButton value="Search Records" action="{!SerchAccountRecords}" reRender="pgBlock,errors"/>
+        
+          </apex:pageblockSection>
+      </apex:pageBlock>
+      
+      <apex:pageBlock title="Search Result : ( {!lstAccounts.size})" id="pgBlock">
+         <apex:pageblockTable value="{!lstAccounts}" var="acc">
+         
+         <apex:column headerValue="Account Name"> 
+         
+           <apex:outputLink value="/{!acc.id}" > target="_blank" {!acc.Name} </apex:outputLink>
+         </apex:column>
+               
+               <apex:column value="{!acc.Name}"/>
+               
+               <apex:column value="{!acc.Rating}"/>
+               <apex:column value="{!acc.Phone}"/>
+               <apex:column value="{!acc.fax}"/>
+         
+         
+         
+         </apex:pageblockTable>
+      
+      
+      </apex:pageBlock>
+ 
+ </apex:form> 
+
+</apex:page>

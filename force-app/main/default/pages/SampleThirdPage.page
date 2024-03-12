@@ -1,0 +1,5 @@
+<apex:page controller="SampleThirdcontroller">
+  Welcome To Salesforce Programming.
+  <br/><br/><b>This is a Third Visual Force.</b>
+  <br/><br/><b>This is Designed By through Developer Console</b>
+</apex:page>

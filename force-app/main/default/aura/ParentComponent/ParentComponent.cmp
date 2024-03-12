@@ -1,0 +1,18 @@
+<aura:component >
+    <aura:attribute name="messagefromNotifier" type="string"/>
+    <aura:attribute name="label" type="string"/>
+ <aura:attribute name="eventCount" type="integer" default='0'/>
+        
+        <aura:handler name="cmpEvent" event="c:ComponentEvent" action="{!c.handlerEvent}"/>
+        <h1>
+        Component Event Handler
+        </h1>
+        
+    <p>{!v.messagefromNotifier} </p>
+    <p>{!v.label} </p>>
+    <p>{!v.eventCount} </p>
+                     
+    <hr/>
+    <c:ChildComponent/>
+                   
+</aura:component>

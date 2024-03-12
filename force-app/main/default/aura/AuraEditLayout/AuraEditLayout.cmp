@@ -1,0 +1,41 @@
+<aura:component>
+    <div class="New">
+  <lightning:recordEditForm objectApiName="Contact">
+    <h2><center> <b>Account Record Edit Form </b></center></h2><br/>
+
+    <lightning:accordion allowMultipleSectionsOpen="True">
+         <lightning:accordionSection label="Account Details">
+              <table>
+                <tr>
+                    <td><lightning:inputField fieldName="FirstName"/></td>
+                    <td><lightning:inputField fieldName="LastName"/></td>
+                    <td><lightning:inputField fieldName="Title"/></td>
+                </tr>
+                <tr>
+                    <td><lightning:inputField fieldName="Phone"/></td>
+                    <td><lightning:inputField fieldName="Fax"/></td>
+                    <td><lightning:inputField fieldName="Email"/></td>
+                </tr>
+              </table>
+         </lightning:accordionSection>
+
+          <lightning:accordionSection label="Contact Details" >
+            <table>
+              <tr>
+                  <td><lightning:inputField fieldName="Namespace0207__Languages__c"/></td>
+                  <td><lightning:inputField fieldName="LeadSource"/></td>
+              </tr>
+              <tr>
+                <td><lightning:inputField fieldName="Description"/></td>
+                <td><lightning:inputField fieldName="Birthdate"/></td>
+              </tr>
+            </table>
+          </lightning:accordionSection>
+    </lightning:accordion>
+
+    <p align="center">
+        <lightning:button label="Create Account" type="submit" variant="brand"/>
+    </p>
+  </lightning:recordEditForm>
+    </div>
+</aura:component>

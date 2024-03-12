@@ -1,0 +1,5 @@
+<aura:component  controller="Aura1">
+    <aura:attribute name="result" type="string"/>
+    <lightning:button label="Submit" variant="brand" onclick="{!c.showme}"/>
+    Result:{!v.result}
+</aura:component>

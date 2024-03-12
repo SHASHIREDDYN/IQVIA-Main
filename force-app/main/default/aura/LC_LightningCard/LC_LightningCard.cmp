@@ -1,0 +1,12 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<div>
+        
+      <lightning:card footer="All rights are reserved by Salesforce" title="Hello">
+         <aura:set >
+             Account <br/>
+             <b>Edge communications</b>
+         </aura:set>  
+      </lightning:card>
+    
+    </div>
+</aura:component>

@@ -1,0 +1,14 @@
+<template>
+    <template for:each={allAccountRecords.data} for:item="acc">
+       <lightning-card icon-name="standard:account" key={acc.Name} title={acc.Name}>
+            <p>{acc.Name}</p>
+            <p>{acc.Rating}</p>
+            <p>{acc.Industry}</p>
+            <p>{acc.Type}</p>
+            <p>{acc.Phone}</p>
+            <p>{acc.Fax}</p>
+            <p>{acc.Ownership}</p>
+            <p>{acc.AnnualRevenue}</p>
+       </lightning-card>
+    </template>
+</template>

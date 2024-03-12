@@ -1,0 +1,35 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    <!--Create an Empty Record from a Record Template
+     To create an empty record from a record template, you can’t set a recordId on the force:recordData tag
+    Without a recordId, Lightning Data Service doesn’t load an existing record.
+
+    In your component’s init or another handler, call the getNewRecord on force:recordData. 
+    getNewRecord takes the following arguments.
+
+    objectApiName:The object API name for the new record.
+    recordTypeId: The 18 character ID of the record type for the new record.
+                   If not specified, the default record type for the object is used, as defined in the user’s profile.
+    skipCache:Whether to load the record template from the server instead of the client-side Lightning Data Service cache.
+               Defaults to false.
+    callback:A function invoked after the empty record is created. This function receives no arguments.
+
+    A toast notification is displayed when a record is saved successfully or when an error is encountered during save:
+({
+    handleSuccess: function (cmp, event, helper) {
+        cmp.find('notifLib').showToast({
+            "title": "Record updated!",
+            "message": "The record "+ event.getParam("id") + " has been updated successfully.",
+            "variant": "success"
+        });
+    },
+
+    handleError: function (cmp, event, helper) {
+        cmp.find('notifLib').showToast({
+            "title": "Something has gone wrong!",
+            "message": event.getParam("message"),
+            "variant": "error"
+        });
+    }
+})
+ -->
+</aura:component>

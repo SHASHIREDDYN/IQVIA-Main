@@ -1,0 +1,6 @@
+<apex:page action="{!CreateAccountRecord}"      controller="CreateRecordController">
+  
+   {!recordResult}
+  
+  
+</apex:page>

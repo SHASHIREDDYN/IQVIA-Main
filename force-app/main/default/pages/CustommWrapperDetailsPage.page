@@ -1,0 +1,30 @@
+<apex:page action="{!GetRecords}" controller="CustomWrapperDetailsPageController" setup="false" sidebar="false" showHeader="true" tabStyle="Account">
+<apex:sectionHeader title="Custom Wrapper" subtitle="AccountLead Wrapper"/>
+<apex:form >
+    <apex:pageblock title="Custom Wrapper Block"  id="Pgblock">
+    
+    <apex:pageBlockButtons location="Top">
+    
+      <apex:commandButton value="Select All" action="{!selectallrecords}"  reRender="pgblock"/>
+      <apex:commandButton value="Un select All" action="{!unselectallrecords}"  reRender="pgblock"/ >
+      <apex:commandButton value="Delete"/>
+      
+    </apex:pageBlockButtons> 
+    
+       <apex:pageblockTable value="{!lstWrapper}" var="wr">
+       
+           <apex:column headerValue="Action">
+                    <apex:inputCheckbox value="{!wr.isselected}"/>
+           </apex:column>
+           <apex:column headerValue="Record Name">
+               <apex:outputLink value="/{!wr.recordId}" target="_blank"> {!wr.firstName}{!wr.lastName} </apex:outputLink>
+           </apex:column>
+         
+           <apex:column value="{!wr.PhoneNumber}" headerValue="PhoneNumber"/>
+           <apex:column value="{!wr.faxNumber}" headerValue="faxNumber"/>
+          
+          
+       </apex:pageblockTable>
+    </apex:pageblock>
+</apex:form>
+</apex:page>

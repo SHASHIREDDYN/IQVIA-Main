@@ -1,0 +1,5 @@
+<aura:component>
+    <lightning:button title='Submit' label='Mybutton' variant='neautral'/>
+    <lightning:button title='Avoid' label='Cancel' variant='base'/>
+
+</aura:component>

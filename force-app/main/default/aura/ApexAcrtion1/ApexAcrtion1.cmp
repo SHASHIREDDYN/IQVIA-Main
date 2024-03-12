@@ -1,0 +1,17 @@
+<aura:component implements="force:appHostable,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+	<lightning:card iconName="standard:account" title="New Account">
+        <aura:set attribute="actions">
+            <lightning:buttonGroup>
+                <lightning:button  label="Save" onclick="{!c.Save}"/>
+                    <lightning:button label="Cancel" onclick="{!c.Cancel}"/>
+            </lightning:buttonGroup>
+        </aura:set>
+        
+        <lightning:input aura:id="name" label="Account Name"/>
+        <lightning:input aura:id="phone" label="Account Phone"/>
+        <lightning:input aura:id="industry" label="Account Industry"/>
+    </lightning:card>
+                    
+                    
+    
+</aura:component>

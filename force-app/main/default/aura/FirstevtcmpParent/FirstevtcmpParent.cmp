@@ -1,0 +1,8 @@
+<aura:component >
+    <aura:attribute name="myname" type="string"/>
+    <aura:handler name="firstCall" event="c:First" action="{!c.invoke}"/>
+    <c:Firstevtcmp/>
+    <br/><br/>
+    Name:{!v.myname}
+    
+</aura:component>

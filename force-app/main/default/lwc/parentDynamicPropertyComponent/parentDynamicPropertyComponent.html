@@ -1,0 +1,17 @@
+<template>
+
+    <c-child-dynamic-property-component child-property={parentProperty}></c-child-dynamic-property-component>
+    <div>
+        <lightning-card title="Parent Component" icon-name="standard:account">
+            <lightning-input label="Enter the New Value : " 
+                        placeholder="New Value"
+                        value={parentProperty}
+                        onchange={handleOnchange}></lightning-input> <br/>
+
+            <lightning-button label="Set New Value"
+                            variant="brand"
+                            onclick={handleOnClick}></lightning-button>
+        </lightning-card>
+        
+    </div>
+</template>

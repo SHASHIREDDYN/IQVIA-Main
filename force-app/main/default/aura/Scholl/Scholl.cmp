@@ -1,0 +1,29 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >
+    <aura:attribute name="Branch" type="String[]" default="E.E.E,C.S.E,E.C.E,MECH"/>
+
+  
+    
+    
+    <h3 class="slds-border_right">School Details</h3>
+        <div class="slds-size_2-of-4">
+        
+        <lightning:input type="String" name="input1" label="Enter a FirstName" />
+        <lightning:input type="String" name="input2" label="Enter a LastName" />
+        <lightning:input type="date" name="input3" label="Child DateBirth" />
+        <lightning:input type="date" name="input4" label="Date field with placeholder (desktop only)" placeholder="type here..."/>
+    <lightning:select name="select" label="Select a Barach" required="true">
+        <aura:iteration items="{!v.Branch}" var="color">
+                <option text="{!color}"></option>
+            </aura:iteration>
+    </lightning:select>
+    </div>
+    
+    
+      <lightning:button label="Download" iconName="utility:download" iconPosition="left" />
+            <lightning:button label="Download" iconName="utility:adduser" />
+            <lightning:button label="Audio" iconName="doctype:audio" />
+            <lightning:button label="Contact" iconName="standard:account" />
+            <lightning:button label="Fliht Booking" iconName="custom:custom20" />
+            <lightning:button label="Edit" iconName="action:edit" />
+
+</aura:component>

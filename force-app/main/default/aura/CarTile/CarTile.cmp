@@ -1,0 +1,17 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="Car" type="Car__c" access="public" 
+                    default="{'sObjectype' : 'Namespace0207__Car__c',
+                             'Name':'Manish',
+                             'MyOwnField': 'My Field example',
+                             'Namespace0207__Picture__c	' :'/Desktop/downnload/car.jpg'}"/>
+                             
+    <lightning:button variant="neutral" class="tile">
+          <div style ="{#'background-image:url('+ v.Car.Namespace0207__Picture__c	 + ')'}" class="innertile">
+          <div class="lower-third">
+              <h1 class="slds-truncate">{!v.Car.Contact__r.Name}</h1>
+           </div>
+           </div>
+              
+    </lightning:button>
+    
+</aura:component>

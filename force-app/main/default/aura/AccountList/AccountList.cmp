@@ -1,0 +1,66 @@
+<aura:component controller="AuraListApex"  >
+    <aura:attribute name="myaccounts" type="Account[]"/>
+    <aura:handler name="init" value="{!this}" action="{!c.invoke}"/>
+    <div class="slds-page-header">
+	<div class="slds-page-header__row">
+		<div class="slds-page-header__col-title">
+			<div class="slds-media">
+				<div class="slds-media__figure">
+					<span class="slds-icon_container slds-icon-standard-opportunity" title="block">
+                        <lightning:icon iconName="standard:account" varaint="error"/>	
+					</span>
+				</div>
+				<div class="slds-media__body">
+					<div class="slds-page-header__name">
+						<div class="slds-page-header__name-title">
+							<h1>
+								<span class="slds-page-header__title slds-truncate" title="Shashidhar">Shadhidhar Nagavelli</span>
+							</h1>
+						</div>
+					</div>
+					<p class="slds-page-header__name-meta" title="myaccounts">Account List</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>  
+    <table class="slds-table slds-table_bordered slds-table_cell-buffer ">
+	<thead>
+		<tr class="slds-text-title_caps">
+			<th  scope="col">
+				<div class="slds-truncate" title="Id">Account id</div>
+			</th>
+			<th  scope="col">
+				<div class="slds-truncate" title="Name">Account Name</div>
+			</th>
+			<th  scope="col">
+				<div class="slds-truncate" title="Phone">Account Phone</div>
+			</th>
+			<th  scope="col">
+				<div class="slds-truncate" title="Rating">Account Rating</div>
+			</th>
+			
+		</tr>
+	</thead>
+	<tbody>
+        <aura:iteration items="{!v.myaccounts}" var="a">
+		<tr class="slds-hint-parent" >
+			
+			<td data-label="Account Name">
+				<div class="slds-truncate" title="Id">{!a.Id}</div>
+			</td>
+			<td data-label="Close Date">
+				<div class="slds-truncate" title="Name">{!a.Name}</div>
+			</td>
+			<td data-label="Prospecting">
+				<div class="slds-truncate" title="{!a.Phone}">{!a.Phone}</div>
+			</td>
+			<td data-label="Confidence">
+				<div class="slds-truncate" title="{!a.Rating}">{!a.Rating}</div>
+			</td>
+	    </tr>
+      </aura:iteration>
+	</tbody>
+</table>
+    
+</aura:component>

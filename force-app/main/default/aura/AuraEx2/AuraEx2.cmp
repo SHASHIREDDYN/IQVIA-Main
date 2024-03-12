@@ -1,0 +1,13 @@
+<aura:component controller="Aura2" >
+    <aura:attribute name="empName" type="string"/>
+    
+    <div class="box">
+        <lightning:input aura:id="lname" label="Enter lastName"/>
+        <lightning:input aura:id="fname" label="Enter firstName"/>
+        <br/>
+        <ui:outputText value="{!v.empName}"/>
+        <br/>
+        <lightning:button label="Submit" onclick="{!c.showme}"/>
+
+    </div>
+</aura:component>

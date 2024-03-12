@@ -1,0 +1,48 @@
+<apex:page setup="false" sidebar="false" showheader="true" tabStyle="Case" >
+      <apex:sectionHeader title="Case Edit" subtitle="New Case"/>
+      <apex:form >
+      
+     
+       
+      <apex:pageblock title="Account Details" id="accBlock">
+      
+      <apex:pageblockButtons Location="Both" >
+  
+     <!-- <apex:commandButton value="Save"/>
+      <apex:commandButton value="Save & New"/>
+      <apex:commandButton value="Delete"/>
+      <apex:commandButton value="Search"/>
+      <apex:commandButton value="Cancel"/>  -->
+      
+      <b>
+      <apex:commandLink value="First"/> &nbsp; &nbsp; &nbsp;
+      <apex:commandLink value="Previous"/> &nbsp; &nbsp; &nbsp; 
+      <apex:commandLink value="Next"/> &nbsp; &nbsp; &nbsp;
+      <apex:commandLink value="Last"/> &nbsp; &nbsp; &nbsp; 
+      
+      </b>
+      
+      </apex:pageblockButtons>
+      
+      
+      <apex:pageBlockSection title="Account Information" columns="2" collapsible="true">
+      </apex:pageBlockSection>
+      
+      <apex:pageBlockSection title="Address Information" columns="2" collapsible="true">
+      </apex:pageBlockSection>
+      
+      <apex:pageBlockSection title="Additional Information" columns="2" collapsible="true">
+      </apex:pageBlockSection>
+      
+      <apex:pageBlockSection title="Contact Details" columns="2" collapsible="true"> 
+      </apex:pageBlockSection>
+      
+      <apex:pageBlockSection title="Description Information" columns="2" collapsible="true">
+       </apex:pageBlockSection>
+      </apex:pageblock>
+      
+      <apex:pageblock title="Contact Infomation" id="conBlock">
+      </apex:pageblock>
+     
+ </apex:form>
+</apex:page>

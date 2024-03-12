@@ -1,0 +1,79 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+
+    <lightning:buttonGroup>
+        <lightning:button label="Refresh" />
+        <lightning:button label="Edit" />
+        <lightning:button label="Save" />
+    </lightning:buttonGroup>
+    <br/> <br/>
+
+    <lightning:buttonGroup>
+        <lightning:button label="Refresh" />
+        <lightning:button label="Edit" />
+        <lightning:button label="Save" disabled="true" />
+    </lightning:buttonGroup>
+    
+        <br/> <br/>
+
+    <lightning:buttonGroup>
+            <lightning:button variant="inverse" label="Refresh" />
+            <lightning:button variant="inverse" label="Edit" />
+            <lightning:button variant="inverse" label="Save" />
+        </lightning:buttonGroup>
+    
+    <!-- Base variant: Makes a button look like a link -->
+    <lightning:button variant="base" label="Base" title="Base action" onclick="{! c.handleClick }"/>
+
+    <!-- Neutral variant (default) -->
+    <lightning:button label="Neutral" title="Neutral action" onclick="{! c.handleClick }"/>
+
+    <!-- Brand variant: Identifies the primary action in a group of buttons -->
+    <lightning:button variant="brand" label="Brand" title="Brand action" onclick="{! c.handleClick }" />
+
+    <!-- Brand-outline variant: Identifies the primary action in a group of buttons, but has a lighter look -->
+    <lightning:button variant="brand-outline" label="Brand Outline" title="Brand action" onclick="{! c.handleClick }" />
+
+    <!-- Destructive variant: Identifies a potentially negative action -->
+    <lightning:button variant="destructive" label="Destructive" title="Destructive action" onclick="{! c.handleClick }"/>
+
+    <!-- Destructive-text variant: Identifies a potentially negative action, but has a lighter look -->
+    <lightning:button variant="destructive-text" label="Destructive Text" title="Destructive action" onclick="{! c.handleClick }"/>
+
+    <!-- Success variant: Identifies a successful action -->
+    <lightning:button variant="success" label="Success" title="Success" onclick="{! c.handleClick }"/>
+
+    
+    <!-- bare -->
+    <lightning:buttonIcon iconName="utility:settings" variant="bare" onclick="{! c.handleClick }" alternativeText="Settings" title="Settings" />
+    <lightning:buttonIcon iconName="utility:settings" variant="bare" onclick="{! c.handleClick }" disabled="true" alternativeText="Settings (disabled)" title="Settings (disabled)" />
+
+    <!-- with brand -->
+    <lightning:buttonIcon iconName="utility:settings" variant="brand" alternativeText="Settings" title="Settings" />
+    <lightning:buttonIcon iconName="utility:settings" variant="brand" disabled="true" alternativeText="Settings (disabled)" title="Settings (disabled)" />
+
+    <!-- with container -->
+    <lightning:buttonIcon iconName="utility:settings" variant="container" alternativeText="Settings" title="Settings" />
+    <lightning:buttonIcon iconName="utility:settings" variant="container" disabled="true" alternativeText="Settings (disabled)" title="Settings (disabled)" />
+
+    <!-- with border / by default -->
+    <lightning:buttonIcon iconName="utility:settings"  alternativeText="Settings" title="Settings" />
+    <lightning:buttonIcon iconName="utility:settings"  disabled="true" alternativeText="Settings (disabled)" title="Settings (disabled)" />
+
+    <!-- with border filled -->
+    <lightning:buttonIcon iconName="utility:settings"  variant="border-filled" alternativeText="Settings" title="Settings" />
+    <lightning:buttonIcon iconName="utility:settings"  variant="border-filled" disabled="true" alternativeText="Settings (disabled)" title="Settings (disabled)" />
+
+    <!-- with icon styling -->
+    <lightning:buttonIcon iconName="utility:settings" variant="bare" alternativeText="Settings" iconClass="dark" title="Settings" />
+    
+    <!--Sizes -->
+    <lightning:buttonIcon iconName="utility:down"  size="xx-small" alternativeText="View More" title="View More" />
+    <lightning:buttonIcon iconName="utility:down"  size="x-small" alternativeText="View More" title="View More" />
+    <lightning:buttonIcon iconName="utility:down"  size="small" alternativeText="View More" title="View More" />
+    <lightning:buttonIcon iconName="utility:down"  alternativeText="View More" title="View More" />
+
+    <lightning:buttonIcon iconName="utility:down"  size="x-small"   variant="bare" alternativeText="View More" title="View More" />
+    <lightning:buttonIcon iconName="utility:down"  size="small"     variant="bare" alternativeText="View More" title="View More" />
+    <lightning:buttonIcon iconName="utility:down"  variant="bare"   alternativeText="View More" title="View More" />
+    <lightning:buttonIcon iconName="utility:down"  size="large"     variant="bare" alternativeText="View More" title="View More" />
+</aura:component>

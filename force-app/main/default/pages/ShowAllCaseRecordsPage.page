@@ -1,0 +1,19 @@
+<apex:page action="{!GetAllCaseRecords}" controller="ShowAllCaseRecordsPageController" setup="false" sidebar="false" showHeader="true" tabStyle="Solution">
+<apex:sectionHeader title="Cases" subtitle="All Cases"/>
+<apex:form >
+        <apex:actionPoller action="{!GetAllCaseRecords}" interval="5" rerender="pgBlock"/>
+        
+          <apex:pageblock title="All Cases :( {!lstCases.Size})" id="pgBlock">
+              <apex:pageblockTable value="{!lstCases}" var="cs">
+                  <apex:column headerValue="Case Number">
+                     <apex:outputLink value="/{!cs.id}" target="_blank">{!cs.CaseNumber}</apex:outputLink>
+                  </apex:column>
+                  <apex:column value="{!cs.Status}"/>
+                  <apex:column value="{!cs.Priority}"/>
+                  <apex:column value="{!cs.Type}"/>
+                  <apex:column value="{!cs.Reason}"/>
+                  <apex:column value="{!cs.SUbject}"/>
+              </apex:pageblockTable>
+          </apex:pageblock>
+</apex:form>
+</apex:page>

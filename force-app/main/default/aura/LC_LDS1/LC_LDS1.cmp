@@ -1,0 +1,41 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+	<!-- Lightning Data Services
+    1. This is used to create,edit,delete,fetch the records from the Sobject without inrteracting with server side controller.
+    like :Apex Class
+   2. LDS run as user Context.
+   3.User context means users OWd,Sharing profiles,Field level Security taking into considaration while performaing the operation.
+   4.LDS will behave like standard Controller.
+   5.LDS has good cache service, which aviod the number of calls to server side for the same set of data.
+   6.Using we can perform
+     a.Loading the Data.
+     b.Creating a new record.
+     c.Saving a record.
+     d.Deleting record.
+-->
+    <br/>
+    <aura:attribute name='recordId' type='string'/>
+    <aura:attribute name='targetRec' type='object'/>
+    <aura:attribute name='newAcc' type='object'/>
+    <aura:attribute name='error' type='string'/>
+
+    <force:recordData aura:id="record"
+                      recordId="{!v.recordId}"
+                      Layouttype="full"
+                      fields='Id,Name,Rating,Phone'
+                      targetRecord="{!v.targetRec}"
+                      targetFields="{!v.newAcc}"
+                      targetError="{!v.error}"
+                      />
+    
+    <lightning:card iconName='standard:Account' title='Account'>
+        <div class="slds-p-horizontal_small">
+           <p class="slds-p-horizontal_small"><lightning:input label='Name' value='{!v.newAcc.Name}'/></p> 
+           <P class="slds-p-horizontal_small"><lightning:input label='Rating' value='{!v.newAcc.Rating}'/>  </P>
+           <p class="slds-p-horizontal_small"><lightning:input label='Phone' value='{!v.newAcc.Phone}'/></p> 
+
+        </div>
+    
+    
+    
+    </lightning:card>
+</aura:component>

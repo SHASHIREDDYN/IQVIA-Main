@@ -1,0 +1,19 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+	 
+    <!--<div class="backgroundInverse">
+
+    <lightning:buttonGroup>
+        <lightning:button  variant="brand" label="Refresh" />
+        <lightning:button  variant="success" label="Edit" />
+        <lightning:button variant="destructive" label="Save" disabled="true"/>
+    </lightning:buttonGroup>
+    </div>-->
+
+   <div class="backgroundInverse">
+        <lightning:buttonGroup>
+            <lightning:button variant="inverse" label="Refresh"/>
+            <lightning:button variant="inverse" label="Edit"/>
+            <lightning:button variant="inverse" label="Save"/>
+        </lightning:buttonGroup>
+    </div>
+    </aura:component>

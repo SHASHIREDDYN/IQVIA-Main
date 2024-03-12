@@ -1,0 +1,13 @@
+.THIS.Box {
+    width:1000px;
+    border:1px dashed blue;
+    padding-left:20px;
+    padding-top:20px;
+    padding-right:20px;
+    padding-bottom:20px;
+    margin-left:300px;
+    margin-top:200px;
+   background-image: url("paper.gif");
+    border-radius:12px;
+    
+}

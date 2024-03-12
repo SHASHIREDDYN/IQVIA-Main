@@ -1,0 +1,6 @@
+<aura:component >
+    <lightning:input label='firstname' aura:id='fname'/>
+    <lightning:input label='lastname' aura:id="lname"/>
+    <lightning:input label='name' aura:id="Name"/>
+    <lightning:button label='Submit' onclick="{!c.invoke}"/>
+</aura:component>

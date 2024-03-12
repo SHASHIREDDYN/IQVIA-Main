@@ -1,0 +1,27 @@
+<template>
+    <div>
+        <lightning-card title="New Account Record" icon-name="standard:account">
+            <lightning-input label="Enter Account Name:" name="aName" required="true" onchange={handleNameChange}></lightning-input>
+            <lightning-input label="Enter Account Rating:" name="aRating" onchange={handleRatingChange}></lightning-input>
+            <lightning-input label="Enter Industry Name:" name="aIndustry" onchange={handleIndustryChange}></lightning-input>
+            <lightning-input label="Enter Annual Revenue:" name="aRevenue" onchange={handleRevenueChange} ></lightning-input>
+            <lightning-input label="Enter Account Type:" name="aType" onchange={handleTypeChange}></lightning-input>
+            <lightning-input label="Enter Account Ownership:" name="aOwnership" onchange={handleOwnershipChange}></lightning-input>
+            <lightning-input label="Enter Contact Number:" name="aPhone"  onchange={handlePhoneChange}></lightning-input>
+            <lightning-input label="Enter Fax Number:" name="aFax" onchange={handleFaxChange} ></lightning-input>
+            <lightning-input label="Enter Website Name :" name="aWebsite" onchange={handleWebsiteChange} ></lightning-input>
+            <lightning-input label="Enter Account Number:" name="aAccountNumber" onchange={handleAccountNumberChange}></lightning-input>
+            <lightning-input label="Enter Billing City:" name="aBillingCity" onchange={handleCityChange}></lightning-input>
+            <lightning-input label="Enter Billing State:" name="aBillingState" onchange={handleStateChange} ></lightning-input>
+            <lightning-input label="Enter Billing Country:" name="aBillingCountry" onchange={handleCountryChange}></lightning-input>
+            <lightning-input label="Enter Billing Postal Code:" name="aBillingPostalCode" onchange={handleZipChange}></lightning-input>
+            <lightning-input label="Enter SLA :" name="aSLA" onchange={handleSLAChange} ></lightning-input>
+            <lightning-input label="Enter Customer Priority:" name="aPriority" onchange={handlePriorityChange} ></lightning-input>
+            <lightning-input label="Enter Active Status:" name="aActive" onchange={handleStatusChange}></lightning-input>
+            <br/>
+            <p align="center">
+                <lightning-button label="Save Record" variant="brand" onclick={handleSaveRecord}></lightning-button>
+            </p>
+        </lightning-card>
+    </div>
+</template>

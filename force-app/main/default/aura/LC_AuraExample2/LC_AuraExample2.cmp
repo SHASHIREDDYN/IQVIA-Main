@@ -1,0 +1,9 @@
+<aura:component controller="Aura2">
+    <aura:attribute name='empname' type='string'/>
+    <lightning:input aura:id='lname' label='Last Name'/>
+    <lightning:input aura:id='fname' label='first Name'/>
+    <br/>
+    <ui:outputText value="{!v.empname}"/>
+    <br/>
+    <lightning:button label="Submit" onclick='{!c.invoke}'/>
+</aura:component>

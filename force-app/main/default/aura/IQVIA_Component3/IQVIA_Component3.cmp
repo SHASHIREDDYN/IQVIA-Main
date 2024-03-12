@@ -1,0 +1,14 @@
+<aura:component >
+    <aura:attribute name='empname' type='string'/>
+    <aura:attribute name='salary' type='decimal'/>
+    
+    <div>
+    Name :{!v.empname}<br></br>
+    Salary :{!v.salary}<br></br>
+        
+    <Lightning:button label="Reset" title='set' onclick="{!c.reset}"/>
+    <Lightning:button label="Cancel" title="Avoid" onclick="{!c.invoke}"/>
+
+    
+    </div>
+</aura:component>

@@ -1,0 +1,104 @@
+<aura:component >
+    <div class='Box' style="width:500px">
+        
+    <lightning:buttonGroup>
+         
+        <lightning:button label='New Contact' variant='brand-outline'/>
+        <lightning:button label='New Opportunity' variant='brand-outline'/>
+        <lightning:button label='New Case' variant='brand-outline'/>
+        <lightning:button label='New Note' variant='brand-outline'/>
+        
+      <lightning:buttonmenu  variant='brand-outline'  title='select a field' aura:id="Menu" alternativeText="Showmenu" menuAlignment="Right" iconsize="x-small" >
+        
+         <lightning:menuItem label="Create a record"></lightning:menuItem>
+         <lightning:menuItem label="New Opportunity"></lightning:menuItem>
+         <lightning:menuItem label="Change Owner"></lightning:menuItem>
+            
+      </lightning:buttonmenu> 
+
+    </lightning:buttonGroup>
+        
+  </div>
+  
+    <div class='Box'>
+        
+       <lightning:button label="brand outline" variant='brand-outline'/>&nbsp;&nbsp;&nbsp;
+       <lightning:button label="brand" variant='brand'/>&nbsp;&nbsp;&nbsp;
+       <lightning:button label="base" variant="base"/>&nbsp;&nbsp;&nbsp;
+       <lightning:button label='Success' variant='success' />&nbsp;&nbsp;&nbsp;
+       <lightning:button label="neutral" variant="neutral"/>&nbsp;&nbsp;&nbsp;
+       <lightning:button label="destructive" variant='destructive'/>&nbsp;&nbsp;&nbsp;
+       <lightning:button label="destructive text" variant='destructive-text'/>&nbsp;&nbsp;&nbsp;
+       <lightning:button label="icon #1" iconname ="Utility:dowmnload" variant="inverse"/>&nbsp;&nbsp;&nbsp;
+       <lightning:button label="inverse" variant="standard:account"/>&nbsp;&nbsp;&nbsp;
+   
+        
+   </div>   
+    
+    <br/><br/><br/>
+    
+   <div class="Box">
+       
+    <lightning:button label='NEW' iconName="utility:new" variant="brand-outline"/>&nbsp;&nbsp;&nbsp;
+    <lightning:button label='Save' iconName="utility:save" iconPosition="right" variant='brand-outline'/>&nbsp;&nbsp;&nbsp;
+    <lightning:button label='download' iconName="utility:download"  variant='brand'/>&nbsp;&nbsp;&nbsp;
+    <lightning:button label='Edit' iconName="utility:edit" variant='brand-outline'/>&nbsp;&nbsp;&nbsp;
+    <lightning:button label='Send Message' iconName="utility:live_message" variant='brand-outline'/>&nbsp;&nbsp;&nbsp;
+    <lightning:button label='Cancel' iconName="utility:deprecate" variant='brand-outline'/>&nbsp;&nbsp;&nbsp;
+    <lightning:button label='Log a Call' iconName="utility:log_a_call" variant='brand-outline'/>&nbsp;&nbsp;&nbsp;
+    <lightning:button label="Icon #1" iconName="utility:download" iconPosition="left"  variant="inverse" />&nbsp;&nbsp;&nbsp;
+    <lightning:button label="Icon #2" iconName="utility:download" iconPosition="left" variant="inverse" />&nbsp;&nbsp;&nbsp;
+   
+   </div> 
+    
+    <div class='Box' style="width:100px;"> 
+        
+           <lightning:buttonmenu  variant='brand-outline'  title='select a field' >
+                <lightning:menuItem label="Crate a record"></lightning:menuItem>
+                <lightning:menuItem label="New Opportunity"></lightning:menuItem>
+                <lightning:menuItem label="Change Owner"></lightning:menuItem>
+           </lightning:buttonmenu> 
+        
+    </div>  
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   <!-- <aura:attribute name='empname' type='string'/>
+    <aura:attribute name='salary' type='decimal'/>
+    
+    <br/>
+    
+      <div>
+         Name :{!v.empname}<br/><br/>
+          Salary:{!v.salary}
+    </div>
+    <br/><br/>
+    
+    <lightning:button label='setdata' onclick="{!c.show}"/>
+    <lightning:button label='cancel' onclick="{!c.cancel}"/>
+    
+    <br/>
+    <aura:if istrue="{!v.action}">
+        true
+    <aura:set attribute="else">
+        false
+        
+    </aura:set>
+    </aura:if>-->
+  
+   
+       
+        
+</aura:component>

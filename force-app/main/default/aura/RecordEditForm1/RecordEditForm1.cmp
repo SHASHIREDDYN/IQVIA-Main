@@ -1,0 +1,11 @@
+<aura:component >
+    <aura:attribute name="recId" type="Id"/>
+      <lightning:recordEditForm recordId="{!v.recId}" objectApiName="Account">
+          <lightning:inputField fieldName="Name"/>
+          <lightning:inputField fieldName="Industry"/>
+          <lightning:inputField fieldName="Phone"/> 
+          
+      </lightning:recordEditForm>
+
+        
+</aura:component>
