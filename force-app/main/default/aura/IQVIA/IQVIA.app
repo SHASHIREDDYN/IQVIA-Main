@@ -1,5 +1,5 @@
 <aura:application extends="force:slds">
     
-<c:getAccontDetailsUIMethod/>
+<c:parentCustomEvent/>
 
 </aura:application>
